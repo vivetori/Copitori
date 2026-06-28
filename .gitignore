@@ -1,0 +1,8 @@
+# Logs de auditoría de MCPs (crecen sin límite, no versionar)
+.claude/logs/
+
+# macOS
+.DS_Store
+
+# Node (si agregas scripts/skills con dependencias)
+node_modules/
