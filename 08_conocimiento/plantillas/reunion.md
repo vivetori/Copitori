@@ -1,34 +1,31 @@
-# Plantilla — Acta de reunión
-
-> Copiar como `YYYY-MM-DD_Titulo.md` en `02_relaciones/reuniones/` (externa) o `07_equipo/reuniones/` (interna).
-
-```markdown
 ---
-fecha: YYYY-MM-DD
-titulo:
-relacion: [persona/empresa, si aplica]
-asistentes:
+fecha: {{date}}
+tipo: externa
+relacion: 
+asistentes: 
+iniciativa: 
+tags:
+  - reunion
 ---
 
-# [Título] — YYYY-MM-DD
+# {{title}}
 
-## Digest
-**Objetivo de la reunión**: [una frase]
+> [!abstract] Digest
+> **Objetivo de la reunión**: [una frase]
 
-**Decisiones / acuerdos**:
--
+## Decisiones / acuerdos
+- 
 
-**Próximos pasos**:
+## Próximos pasos
 | Acción | Responsable | Fecha |
 |---|---|---|
-| | | |
+|  |  |  |
 
-**Temas sensibles / riesgos**:
--
+> [!warning] Temas sensibles / riesgos
+> - 
 
 ## Notas
 [Resumen narrativo de lo hablado.]
 
 ## Transcripción literal
 [Pegar aquí la transcripción completa si existe, para búsqueda posterior.]
-```

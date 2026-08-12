@@ -1,39 +1,36 @@
-# Plantilla — Ficha de iniciativa / proyecto
-
-> Copiar como `03_iniciativas/<nombre>.md` (o crear carpeta si es grande).
-
-```markdown
 ---
-nombre: [Iniciativa / proyecto]
-estado: idea | activo | en_riesgo | pausado | cerrado
-responsable:
-relacion: [cliente/área asociada, si aplica]
-inicio: YYYY-MM-DD
-fin_objetivo: YYYY-MM-DD
+estado: idea
+responsable: 
+relacion: 
+objetivo: 
+inicio: {{date}}
+fin_objetivo: 
+tags:
+  - iniciativa
 ---
 
-# [Nombre de la iniciativa]
+# {{title}}
 
 ## Objetivo
-[Qué logra y para quién — una frase. A qué objetivo de 01_objetivos/ contribuye.]
+[Qué logra y para quién — una frase. Enlaza el objetivo de `01_objetivos/` al que contribuye.]
 
 ## Alcance
 **Incluye**:
--
+- 
+
 **No incluye**:
--
+- 
 
 ## Plan de fases
 | # | Fase / hito | Entregable | Fecha objetivo | Estado |
 |---|---|---|---|---|
-| 1 | | | | |
+| 1 |  |  |  |  |
 
-## Riesgos
-- [Riesgo] → [mitigación]
+> [!warning] Riesgos
+> - [Riesgo] → [mitigación]
 
 ## Próximos pasos
-- [ ] [Acción] — YYYY-MM-DD
+- [ ] [Acción] 📅 YYYY-MM-DD
 
 ## Bitácora
-- **YYYY-MM-DD**: [avance / decisión]
-```
+- **{{date}}**: [avance / decisión]

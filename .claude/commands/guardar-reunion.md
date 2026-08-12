@@ -16,6 +16,7 @@ Archiva la reunión `$ARGUMENTS` en el expediente correspondiente.
 3. **Genera el archivo** en la carpeta `reuniones/` correspondiente, con nombre `YYYY-MM-DD_Titulo.md`, usando la plantilla [08_conocimiento/plantillas/reunion.md](../../08_conocimiento/plantillas/reunion.md):
    - **Digest**: decisiones, acuerdos, próximos pasos con responsable y fecha.
    - **Transcripción literal** al final (si la hay), para búsqueda posterior.
+   - **Enlaza con wikilinks**: en el frontmatter, `relacion` e `iniciativa` como lista de `"[[Nombre]]"`; en el cuerpo, cada persona y proyecto que menciones. Así el acta aparece sola en los backlinks de la relación.
 
 4. **Sincroniza lo accionable**:
    - Actualiza la historia y los próximos pasos en el archivo de la relación.

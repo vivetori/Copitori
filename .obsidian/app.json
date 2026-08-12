@@ -1,0 +1,18 @@
+{
+  "attachmentFolderPath": "99_adjuntos",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": false,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "es-ES"
+  ],
+  "trashOption": "local",
+  "promptDelete": true,
+  "propertiesInDocument": "visible"
+}

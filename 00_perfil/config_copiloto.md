@@ -29,6 +29,23 @@
 | Finanzas | [ej. wallet, ERP] | [ ] |
 | Automatización | [ej. n8n, Make] | [ ] |
 
+## Plugins de skills activos
+> Skills externas instaladas en Claude Code. Copitori las usa como apoyo, pero **sus comandos
+> propios mandan**: conocen tus SOPs y tu voz. Si una skill externa trae umbrales o condiciones
+> propias, ignóralos y usa los de [08_conocimiento/sops/](../08_conocimiento/sops/).
+
+| Plugin | Origen | Para qué | ¿Activo? |
+|---|---|---|---|
+| `document-skills` | Anthropic oficial | Word, Excel, PowerPoint, PDF | [x] |
+| `productivity` | Anthropic oficial | Tareas y memoria de trabajo | [x] |
+| `sales` | Anthropic oficial | Investigación de cuentas, prep de llamadas, pipeline | [ ] *(módulo Comercial)* |
+| `finance` | Anthropic oficial | Estados financieros, variaciones, cierre | [ ] *(módulo Finanzas)* |
+| `marketing` | Anthropic oficial | Campañas, contenido, revisión de marca | [ ] *(módulo Comunicación)* |
+| `skill-creator` | Anthropic oficial | Crear tus propias skills de negocio | [x] |
+
+> Catálogo evaluado de bancos externos y qué vale la pena traer:
+> [08_conocimiento/bancos_skills_y_agentes.md](../08_conocimiento/bancos_skills_y_agentes.md).
+
 ## Preferencias operativas
 - **Hora del briefing diario**: [ej. 8:00]
 - **Día de la revisión semanal**: [ej. viernes]

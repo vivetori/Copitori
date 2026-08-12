@@ -7,6 +7,8 @@ argument-hint: "[opcional: nombre de cliente para foco específico]"
 
 Si `$ARGUMENTS` está vacío, hazme un análisis general del pipeline. Si tiene un nombre de cliente, enfócate solo en esa oportunidad.
 
+> **Delega el análisis general en el agente `estratega-comercial`** — lee las actas trato por trato y eso no debe consumir el hilo principal. Tú te quedas con su conclusión y la conversación conmigo. Para el foco en un cliente concreto, trabaja aquí mismo.
+
 ## Análisis general
 1. Lee [04_comercial/pipeline.md](../../04_comercial/pipeline.md).
 2. Si hay CRM conectado, cruza con datos frescos.

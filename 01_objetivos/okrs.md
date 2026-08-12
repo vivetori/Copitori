@@ -23,7 +23,11 @@
 
 ## Cadencia de revisión
 - **Semanal**: avance de KRs (usa `/revision-semanal`).
+- **Mensual**: corte del panel de métricas (usa `/kpis` → [kpis.md](kpis.md)).
 - **Trimestral**: redefinir objetivos del siguiente periodo.
+
+> Las métricas que vigilan estos objetivos viven en [kpis.md](kpis.md). Un objetivo sin ninguna
+> métrica que lo siga es un punto ciego — `/kpis` te lo señala.
 
 ---
 Cambios: [YYYY-MM-DD] — versión inicial.

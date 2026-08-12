@@ -1,5 +1,16 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/scripts/arranque.sh\"",
+            "statusMessage": "Comprobando arranque de Copitori"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "mcp__.*",
@@ -25,7 +36,9 @@
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(cat:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "Bash(bash .claude/scripts/entorno.sh verificar)",
+      "Bash(bash .claude/scripts/entorno.sh reparar-estructura)"
     ],
     "deny": []
   }

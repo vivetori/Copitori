@@ -18,9 +18,12 @@
   > [Cargo] · [Empresa]
   > [contacto] · [web]
 
-## Mensajes (LinkedIn / chat)
+## Mensajes directos (LinkedIn, WhatsApp, chat)
 - Gancho en la primera línea (dato, pregunta o resultado), sin "Me complace anunciar".
 - Párrafos de 1–2 líneas.
+
+> Para **publicaciones** de LinkedIn (posts), esto define el registro; la estructura, la mecánica
+> de la plataforma y el filtro de confidencialidad los aporta la skill `post-linkedin`.
 
 ## Lo que NUNCA escribo
 - [Ej.: promesas de resultados garantizados]

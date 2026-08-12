@@ -1,0 +1,27 @@
+{
+  "types": {
+    "tags": "tags",
+    "aliases": "aliases",
+    "tipo": "text",
+    "estado": "text",
+    "sector": "text",
+    "organizacion": "text",
+    "pais": "text",
+    "fuente": "text",
+    "relacion": "multitext",
+    "asistentes": "multitext",
+    "iniciativa": "multitext",
+    "objetivo": "multitext",
+    "responsable": "text",
+    "cliente": "text",
+    "valor": "number",
+    "fecha": "date",
+    "fecha_primer_contacto": "date",
+    "ultimo_contacto": "date",
+    "proximo_paso_fecha": "date",
+    "inicio": "date",
+    "fin_objetivo": "date",
+    "fecha_envio": "date",
+    "valida_hasta": "date"
+  }
+}

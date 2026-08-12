@@ -18,8 +18,9 @@ Hazme el briefing ejecutivo de hoy. Sé directo, sin relleno. Usa solo las herra
 - Si el módulo Comercial está activo, incluye el pipeline ([04_comercial/pipeline.md](../../04_comercial/pipeline.md)).
 - Sugiere 3 acciones concretas para hoy.
 
-**4. Iniciativas en riesgo** (revisa [03_iniciativas/](../../03_iniciativas/)):
-- Marca riesgos activos y entregables que vencen en los próximos 7 días.
+**4. Iniciativas y riesgos** (revisa [03_iniciativas/](../../03_iniciativas/) y [07_equipo/riesgos.md](../../07_equipo/riesgos.md)):
+- Marca entregables que vencen en los próximos 7 días.
+- Escala los riesgos **críticos y altos**, y cualquiera cuya revisión esté vencida según [08_conocimiento/sops/riesgos.md](../../08_conocimiento/sops/riesgos.md). Una línea cada uno: qué amenaza y qué toca hacer.
 
 **5. Finanzas** (solo si el módulo está activo): cobros o pagos vencidos en [05_finanzas/](../../05_finanzas/), con borrador de recordatorio.
 
@@ -28,3 +29,10 @@ Hazme el briefing ejecutivo de hoy. Sé directo, sin relleno. Usa solo las herra
 - Si detectaste tareas nuevas en los puntos anteriores, agrégalas a TASKS.md.
 
 Cierra con **"Las 3 cosas que importan hoy"** — solo 3, las que mueven más la aguja, filtradas por [01_objetivos/okrs.md](../../01_objetivos/okrs.md).
+
+---
+
+**7. Archiva el briefing** en `09_bitacora/YYYY-MM-DD.md` (fecha de hoy), con la plantilla [08_conocimiento/plantillas/dia.md](../../08_conocimiento/plantillas/dia.md). Es también la nota diaria de Obsidian.
+- Si el archivo ya existe, **actualízalo** — no crees un duplicado ni sobrescribas lo que yo haya escrito a mano.
+- Enlaza con wikilinks cada relación, iniciativa y persona que menciones (`[[Nombre]]`), para que el día quede conectado en el grafo.
+- Deja el bloque «Cierre del día» vacío: lo lleno yo al terminar.

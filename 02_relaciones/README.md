@@ -6,7 +6,9 @@ Una ficha `.md` por persona u organización que importa: clientes, prospectos, s
 |---|---|
 | [activos/](activos/) | Relaciones vivas (clientes, stakeholders, aliados en curso). |
 | [prospectos/](prospectos/) | Aún no cerradas — en exploración o calificación. |
+| [competencia/](competencia/) | Rivales relevantes. Los mantiene el agente `analista-competencia`. |
 | [reuniones/](reuniones/) | Actas de reuniones con estas relaciones (`YYYY-MM-DD_Titulo.md`). |
 
 Plantilla: [08_conocimiento/plantillas/relacion.md](../08_conocimiento/plantillas/relacion.md).
 Estados: `prospecto`, `activo`, `pausado`, `cerrado_ganado`, `cerrado_perdido`.
+Tipos: `cliente`, `prospecto`, `stakeholder`, `aliado`, `proveedor`, `competidor`.

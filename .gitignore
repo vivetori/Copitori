@@ -1,6 +1,15 @@
 # Logs de auditoría de MCPs (crecen sin límite, no versionar)
 .claude/logs/
 
+# Obsidian — la configuración de la bóveda SÍ se versiona (.obsidian/*.json),
+# pero no el estado local de cada persona.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+
 # macOS
 .DS_Store
 

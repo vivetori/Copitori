@@ -1,0 +1,6 @@
+{
+  "folder": "09_bitacora",
+  "format": "YYYY-MM-DD",
+  "template": "08_conocimiento/plantillas/dia.md",
+  "autorun": false
+}
