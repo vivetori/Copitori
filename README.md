@@ -62,6 +62,7 @@ Escribe `/` para verlos. Los más usados:
 | `/junta` | Prepara una junta o comité: agenda, cifras, riesgos y las preguntas incómodas. |
 | `/kpis` | Actualiza el panel de KPIs contra tus objetivos. |
 | `/boveda` | Audita la bóveda: enlaces rotos, notas huérfanas, fichas sin próximo paso. |
+| `/playbook` | Desarrolla un negocio con la metodología GoSmartUp: los 8 KeyPoints, validados y escritos. |
 | `/instalar` | Verifica el entorno e instala lo que falte (Obsidian, bóveda, estructura). |
 | `/pipeline`, `/propuesta` | *(módulo comercial)* |
 | `/configurar` | (Re)ejecuta el asistente de configuración. |
@@ -70,11 +71,12 @@ Escribe `/` para verlos. Los más usados:
 
 ## 👥 Tu equipo directivo
 
-Once agentes especializados. No los invocas: Copitori delega en ellos cuando la tarea encaja, o los pides por nombre. Cada uno mira el negocio desde un ángulo distinto.
+Doce agentes especializados. No los invocas: Copitori delega en ellos cuando la tarea encaja, o los pides por nombre. Cada uno mira el negocio desde un ángulo distinto.
 
 | | Agente | Para qué |
 |---|---|---|
 | ⚔️ | `contradictor` | Ataca tu decisión antes de que lo haga la realidad |
+| 🚀 | `asesor-emprendimiento` | Construye el negocio con los 8 KeyPoints de GoSmartUp |
 | 📜 | `archivista` | "¿Qué le prometimos a este cliente?" — cruza toda la bóveda y cita fuentes |
 | 🔎 | `investigador` | Investiga a fondo una persona u organización |
 | ⚠️ | `analista-riesgos` | Qué puede salir mal, con dueño y fecha |

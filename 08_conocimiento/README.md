@@ -16,6 +16,7 @@ Un umbral o una condición se define en **un solo** SOP. Los comandos y agentes 
 - [sops/seguimiento.md](sops/seguimiento.md) — umbrales de seguimiento *(todos)*
 - [sops/onboarding.md](sops/onboarding.md) — arranque de relación/proyecto *(todos)*
 - [sops/riesgos.md](sops/riesgos.md) — matriz, categorías y cadencia de riesgos *(todos)*
+- [sops/metodologia_gosmartup.md](sops/metodologia_gosmartup.md) — los 8 KeyPoints, sus criterios de validación y dónde vive cada resultado *(emprendimiento)*
 - [sops/calificacion_leads.md](sops/calificacion_leads.md) — calificación de oportunidades *(módulo Comercial)*
 - [sops/condiciones_comerciales.md](sops/condiciones_comerciales.md) — precios y condiciones *(módulo Comercial)*
 - [sops/propuestas.md](sops/propuestas.md) — estructura de propuestas *(módulo Comercial)*

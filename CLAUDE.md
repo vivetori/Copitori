@@ -208,6 +208,7 @@ En [.claude/commands/](.claude/commands/):
 - `/junta` — prepara una junta o comité: agenda, cifras, riesgos y las preguntas incómodas
 - `/kpis` — actualiza el panel de KPIs contra los objetivos
 - `/boveda` — audita la bóveda Obsidian: enlaces rotos, notas huérfanas, frontmatter fuera de esquema
+- `/playbook` — desarrolla un negocio con la metodología GoSmartUp: los 8 KeyPoints, con validación y resultados escritos en la bóveda
 - `/pipeline` — *(módulo comercial)* estado del pipeline + sugerencias de acción
 - `/propuesta` — *(módulo comercial)* genera una propuesta para un cliente
 
@@ -226,6 +227,7 @@ Puedes lanzar varios en paralelo cuando los frentes sean independientes.
 
 | Agente | Para qué | Lo usa |
 |---|---|---|
+| `asesor-emprendimiento` | Desarrolla el negocio con la metodología GoSmartUp (8 KeyPoints), valida cada uno y escribe los resultados. | `/playbook` |
 | `contradictor` | Ataca una decisión antes de comprometerte. Premortem, supuestos frágiles, veredicto. | Decisiones grandes, `/junta` |
 | `archivista` | Memoria institucional: cruza toda la bóveda y responde con fuentes citadas. | `/sintesis` |
 | `investigador` | Investiga a fondo **una** persona u organización. | `/reunion`, prospección |

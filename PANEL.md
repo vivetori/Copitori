@@ -71,6 +71,7 @@ path:"07_equipo/riesgos" (Crítico OR Alto)
 - **Calificación de leads** → [[08_conocimiento/sops/calificacion_leads|calificación de leads]] *(comercial)*
 - **Condiciones comerciales** → [[08_conocimiento/sops/condiciones_comerciales|condiciones comerciales]] *(comercial)*
 - **Propuestas** → [[08_conocimiento/sops/propuestas|propuestas]] *(comercial)*
+- **Metodología GoSmartUp** → [[08_conocimiento/sops/metodologia_gosmartup|los 8 KeyPoints]] — cómo se desarrolla y valida un negocio
 
 ## Tu configuración
 
@@ -82,7 +83,7 @@ path:"07_equipo/riesgos" (Crítico OR Alto)
 
 ## Comandos más usados
 
-`/resumen-dia` · `/captura` · `/triage` · `/seguimiento` · `/reunion` · `/sintesis` · `/revision-semanal` · `/kpis` · `/junta` · `/guardar-reunion` · `/boveda`
+`/resumen-dia` · `/captura` · `/triage` · `/seguimiento` · `/reunion` · `/sintesis` · `/revision-semanal` · `/kpis` · `/junta` · `/guardar-reunion` · `/boveda` · `/playbook`
 
 Mantenimiento: `/instalar` (entorno y Obsidian) · `/configurar` (tu perfil)
 
@@ -93,5 +94,6 @@ Pídelos por nombre cuando los necesites; si no, Copitori delega solo.
 ⚔️ `contradictor` — ataca tu decisión · 📜 `archivista` — memoria de la bóveda · 🔎 `investigador` — una persona u organización
 ⚠️ `analista-riesgos` · 💰 `analista-financiero` · 🤝 `negociador` · 👤 `gestor-de-equipo`
 🎯 `analista-competencia` · ⚖️ `revisor-legal` · 📈 `estratega-comercial` · ✍️ `redactor`
+🚀 `asesor-emprendimiento` — desarrolla tu negocio con los 8 KeyPoints de GoSmartUp
 
 > Guía de la bóveda Obsidian → [[OBSIDIAN]] · Bancos de skills y agentes → [[bancos_skills_y_agentes]]

@@ -10,6 +10,11 @@
 .obsidian/plugins/*/data.json
 .trash/
 
+# Adjuntos: la carpeta se versiona (su README), el contenido no.
+# Son archivos tuyos —o de terceros— y no forman parte de la plantilla.
+99_adjuntos/*
+!99_adjuntos/README.md
+
 # macOS
 .DS_Store
 
