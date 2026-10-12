@@ -26,8 +26,15 @@ Por eso, en una skill lo más importante es su `description`: es lo único que d
 | [crear-sop](crear-sop/) | Describes un proceso que se repite o dices "siempre lo hacemos así". Lo convierte en regla con dueño único. |
 | [informe-de-estado](informe-de-estado/) | Reportas avance **hacia afuera**: cliente, sponsor, junta. Semáforo honesto y petición concreta. |
 | [post-linkedin](post-linkedin/) | Escribes una publicación para LinkedIn. Saca el material de la bóveda, filtra lo confidencial y evita lo que delata a una IA. |
+| [acta-de-constitucion](acta-de-constitucion/) | Arrancas un proyecto con sponsor y presupuesto. Objetivos medibles, alcance negativo explícito y autoridad clara. *(Proyectos / PMO)* |
+| [edt-y-cronograma](edt-y-cronograma/) | Hay que planificar un proyecto: EDT con regla del 100 %, hitos verificables, ruta crítica. *(Proyectos / PMO)* |
+| [registro-interesados](registro-interesados/) | Aparecen varios actores con poder sobre un proyecto. Poder/interés, postura por hechos y plan de comunicación. *(Proyectos / PMO)* |
+| [valor-ganado](valor-ganado/) | Hay que decir cuánto se ha avanzado y a qué costo. PV/EV/AC → SPI, CPI, EAC, con la fórmula declarada. *(Proyectos / PMO)* |
+| [control-de-cambios](control-de-cambios/) | Alguien pide algo que mueve alcance, fecha o costo. Impacto, alternativas y nivel de autoridad del SOP. *(Proyectos / PMO)* |
+| [lecciones-aprendidas](lecciones-aprendidas/) | Se cumple un hito o se cierra un proyecto. Lo bueno y lo malo, convertido en regla. *(Proyectos / PMO)* |
+| [formulacion-marco-logico](formulacion-marco-logico/) | Hay que formular un proyecto público, de cooperación o en formato MGA. Árboles de problemas y objetivos, matriz de marco lógico. *(Proyectos / PMO)* |
 
-Se combinan: un informe de estado aplica también `comunicacion-ejecutiva` y `presentar-numeros`.
+Se combinan: un informe de estado aplica también `comunicacion-ejecutiva`, `presentar-numeros` y, en un proyecto del módulo PMO, `valor-ganado`.
 
 ## Las que vienen de fuera
 

@@ -22,7 +22,9 @@ Proyecto · periodo · responsable · **semáforo**.
 | 🟡 **Amarillo** | Algo se va a mover o hay un riesgo activo **con** mitigación en curso. Todavía se arregla dentro del equipo. |
 | 🔴 **Rojo** | Un hito ya se perdió o se perderá, o hay un bloqueo que **no** se resuelve sin quien lee esto. |
 
-**Regla dura**: un proyecto pasa a rojo el día que se sabe, no el día que ya no hay remedio. El amarillo que dura tres periodos seguidos es rojo — nómbralo.
+**Regla dura**: un proyecto pasa a rojo el día que se sabe, no el día que ya no hay remedio.
+
+Si el proyecto es una carpeta del módulo Proyectos / PMO (tiene `acta_constitucion.md` y `cronograma.md`), **el color no se decide aquí**: sale de los umbrales de SPI, CPI, hitos y bloqueos del [SOP de gestión de proyectos](../../../08_conocimiento/sops/gestion_proyectos.md) —incluida la regla del amarillo que dura tres cortes— y las cifras se calculan con la skill `valor-ganado`. La tabla de arriba es lo que el color **significa** para quien lee; el SOP es lo que lo **fija**.
 
 Si cambió de color desde el último informe, **dilo en la primera línea y explica por qué**. Es lo primero que se busca.
 
@@ -58,5 +60,6 @@ Máximo tres cosas, con fecha.
 ## Fuentes y cierre
 
 Sácalo de la ficha en [03_iniciativas/](../../../03_iniciativas/): plan de fases, riesgos y bitácora. Si la ficha está desactualizada, actualízala primero: el informe es un reflejo, no una fuente paralela.
+En una carpeta de proyecto del módulo PMO, el informe lo produce `/estado-semanal` (con el agente `controlador-proyectos`) y queda en `estado/AAAA-MM-DD.md`; esta skill le da la forma al borrador para el sponsor.
 
 Al terminar: registra el envío en la bitácora de la iniciativa, agrega a [TASKS.md](../../../TASKS.md) lo que te comprometiste a resolver, y muestra el borrador antes de enviarlo.
