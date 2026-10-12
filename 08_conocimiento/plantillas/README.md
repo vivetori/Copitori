@@ -25,6 +25,7 @@ resolviendo `{{title}}` y `{{date}}` con los datos reales.
 | [decision.md](decision.md) | entrada dentro de [../../07_equipo/decisiones.md](../../07_equipo/decisiones.md) | *(fragmento, no archivo)* | `/guardar-reunion`, `/revision-semanal` |
 | [dia.md](dia.md) | `09_bitacora/` | `YYYY-MM-DD.md` | `/resumen-dia`, nota diaria de Obsidian |
 | [gosmartup/](gosmartup/) | `03_iniciativas/<Startup>/` | `panel.md`, `kpN_*.md`, `validaciones/` | `/playbook`, agente `asesor-emprendimiento` |
+| [proyecto/](proyecto/) | `03_iniciativas/<proyecto>/` | `acta_constitucion.md`, `interesados.md`, `edt.md`, `cronograma.md`, `riesgos.md`, `cambios.md`, `estado/`, `lecciones_aprendidas.md`, `acta_cierre.md`, `marco_logico.md` | `/kickoff`, `/estado-semanal`, `/cambio`, `/cierre`, agentes `planificador-proyectos`, `controlador-proyectos`, `formulador-proyectos` |
 
 > Las propuestas toman sus condiciones de [../sops/condiciones_comerciales.md](../sops/condiciones_comerciales.md)
 > y su estructura de [../sops/propuestas.md](../sops/propuestas.md) — nunca se escriben valores a mano.

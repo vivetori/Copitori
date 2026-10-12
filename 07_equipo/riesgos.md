@@ -8,7 +8,8 @@ tags:
 
 > Los riesgos vivos del negocio, en un solo lugar. Lo mantiene el agente `analista-riesgos`.
 > Cómo se evalúa y cada cuánto se revisa: [08_conocimiento/sops/riesgos.md](../08_conocimiento/sops/riesgos.md).
-> Aquí van los riesgos **transversales**. Los propios de un proyecto viven en su ficha de [03_iniciativas/](../03_iniciativas/).
+> Aquí van los riesgos **transversales**. Los propios de un proyecto viven en su ficha de [03_iniciativas/](../03_iniciativas/)
+> (o en `<proyecto>/riesgos.md` si es una carpeta del módulo Proyectos / PMO); de esos, solo se espejan aquí los **altos o críticos**, enlazando al proyecto.
 
 ## Abiertos
 

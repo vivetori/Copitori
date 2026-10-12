@@ -27,6 +27,19 @@
     "inicio": "date",
     "fin_objetivo": "date",
     "fecha_envio": "date",
-    "valida_hasta": "date"
+    "valida_hasta": "date",
+    "sponsor": "text",
+    "pm": "text",
+    "semaforo": "text",
+    "presupuesto": "number",
+    "spi": "number",
+    "cpi": "number",
+    "ultimo_corte": "date",
+    "fin_estimado": "date",
+    "proyecto": "multitext",
+    "semana": "number",
+    "semanas": "number",
+    "version": "number",
+    "version_linea_base": "number"
   }
 }

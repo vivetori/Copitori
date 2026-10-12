@@ -8,6 +8,7 @@ Aquí viven las **reglas** que todo comando y agente respeta, las **plantillas**
 | [sops/](sops/) | Procedimientos con **dueño único**: cada regla se define una sola vez aquí. |
 | [plantillas/](plantillas/) | Formatos base (nativos de Obsidian) para fichas, reuniones, propuestas, decisiones y bitácora. |
 | [bancos_skills_y_agentes.md](bancos_skills_y_agentes.md) | Catálogo evaluado de repos de skills y agentes, y ruta para evolucionar Copitori. |
+| [modulo_proyectos.md](modulo_proyectos.md) | Diseño del módulo Proyectos / PMO: mapa PMBOK → artefacto → comando/skill/agente. |
 
 ## Principio clave: dueño único de cada regla
 Un umbral o una condición se define en **un solo** SOP. Los comandos y agentes **enlazan** a ese SOP, nunca copian el valor. Así, cuando cambias un plazo, cambia en todas partes a la vez.
@@ -17,6 +18,7 @@ Un umbral o una condición se define en **un solo** SOP. Los comandos y agentes 
 - [sops/onboarding.md](sops/onboarding.md) — arranque de relación/proyecto *(todos)*
 - [sops/riesgos.md](sops/riesgos.md) — matriz, categorías y cadencia de riesgos *(todos)*
 - [sops/metodologia_gosmartup.md](sops/metodologia_gosmartup.md) — los 8 KeyPoints, sus criterios de validación y dónde vive cada resultado *(emprendimiento)*
+- [sops/gestion_proyectos.md](sops/gestion_proyectos.md) — semáforo, escalamiento, ciclo de informe, autoridad de cambios, reservas y cierre *(módulo Proyectos / PMO)*
 - [sops/calificacion_leads.md](sops/calificacion_leads.md) — calificación de oportunidades *(módulo Comercial)*
 - [sops/condiciones_comerciales.md](sops/condiciones_comerciales.md) — precios y condiciones *(módulo Comercial)*
 - [sops/propuestas.md](sops/propuestas.md) — estructura de propuestas *(módulo Comercial)*

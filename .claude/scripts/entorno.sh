@@ -21,8 +21,8 @@ case "$(uname -s)" in
 esac
 
 CARPETAS="00_perfil 01_objetivos 02_relaciones 03_iniciativas 04_comercial 05_finanzas
-06_comunicacion 07_equipo 08_conocimiento 08_conocimiento/plantillas 08_conocimiento/sops
-09_bitacora 99_adjuntos .claude/commands .claude/agents .claude/skills .claude/scripts .obsidian"
+06_comunicacion 07_equipo 08_conocimiento 08_conocimiento/plantillas 08_conocimiento/plantillas/proyecto
+08_conocimiento/sops 09_bitacora 99_adjuntos .claude/commands .claude/agents .claude/skills .claude/scripts .obsidian"
 
 ARCHIVOS="CLAUDE.md PANEL.md README.md TASKS.md OBSIDIAN.md
 00_perfil/identidad.md 00_perfil/organizacion.md 00_perfil/config_copiloto.md
