@@ -13,6 +13,7 @@ Empieza leyendo los últimos 7 archivos de [09_bitacora/](../../09_bitacora/): s
 ## 2. Iniciativas
 - Revisa [03_iniciativas/](../../03_iniciativas/). Estado de cada una: en curso / en riesgo / bloqueada.
 - Para cada bloqueada o en riesgo: cuál es el cuello de botella y qué desbloquea.
+- Si el módulo Proyectos / PMO está activo: lee [03_iniciativas/portafolio.md](../../03_iniciativas/portafolio.md) y lista los proyectos en 🔴 o 🟡 con la decisión que esperan de mí; si algún proyecto no tiene corte esta semana, recuérdame `/estado-semanal`. Criterios: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md).
 
 ## 3. Relaciones y comercial
 - Movimientos de la semana en [02_relaciones/](../../02_relaciones/) y, si el módulo está activo, [04_comercial/pipeline.md](../../04_comercial/pipeline.md).

@@ -20,6 +20,7 @@ Hazme el briefing ejecutivo de hoy. Sé directo, sin relleno. Usa solo las herra
 
 **4. Iniciativas y riesgos** (revisa [03_iniciativas/](../../03_iniciativas/) y [07_equipo/riesgos.md](../../07_equipo/riesgos.md)):
 - Marca entregables que vencen en los próximos 7 días.
+- Si el módulo Proyectos / PMO está activo: los proyectos en 🔴 o 🟡 según el `semaforo` de su acta (una línea: por qué y qué decisión espera por mí), los hitos de los próximos 7 días del `cronograma.md` de cada proyecto, y los que llevan más de 7 días sin corte. Criterios: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md).
 - Escala los riesgos **críticos y altos**, y cualquiera cuya revisión esté vencida según [08_conocimiento/sops/riesgos.md](../../08_conocimiento/sops/riesgos.md). Una línea cada uno: qué amenaza y qué toca hacer.
 
 **5. Finanzas** (solo si el módulo está activo): cobros o pagos vencidos en [05_finanzas/](../../05_finanzas/), con borrador de recordatorio.
