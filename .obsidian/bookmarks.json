@@ -5,6 +5,7 @@
     { "type": "file", "title": "🎯 Objetivos", "path": "01_objetivos/okrs.md" },
     { "type": "folder", "title": "🤝 Relaciones", "path": "02_relaciones" },
     { "type": "folder", "title": "🚀 Iniciativas", "path": "03_iniciativas" },
+    { "type": "file", "title": "📊 Portafolio de proyectos", "path": "03_iniciativas/portafolio.md" },
     { "type": "file", "title": "🧭 Decisiones", "path": "07_equipo/decisiones.md" },
     { "type": "folder", "title": "📚 SOPs", "path": "08_conocimiento/sops" },
     { "type": "search", "title": "🔥 Pendientes abiertos", "query": "task-todo:\"\"" }
