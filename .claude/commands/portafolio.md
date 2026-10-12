@@ -4,6 +4,10 @@ description: (módulo Proyectos / PMO) Vista de todos los proyectos — semáfor
 
 Hazme la vista de portafolio. Una pantalla: lo que necesito para decidir dónde poner mi atención esta semana.
 
+## 0. Módulo activo
+Comprueba en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md) que **Proyectos / PMO** esté marcado `[x]`. Si no, responde solo esto y no sigas: «El módulo Proyectos / PMO está desactivado. Actívalo con `/configurar` (Etapa 4).»
+Si está activo pero no hay ninguna carpeta de proyecto, dilo en una línea y propón `/kickoff`.
+
 Criterios de semáforo y escalamiento: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md). Destino: [03_iniciativas/portafolio.md](../../03_iniciativas/portafolio.md).
 
 ## 1. Fuentes

@@ -5,7 +5,10 @@ argument-hint: "<proyecto | todos>  (vacío = todos los activos)"
 
 Hazme el corte de control de `$ARGUMENTS`. Honesto: el semáforo lo fijan los números y el SOP, no el ánimo.
 
-Reglas (semáforo, escalamiento, ciclo): [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md).
+## 0. Módulo activo
+Comprueba en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md) que **Proyectos / PMO** esté marcado `[x]`. Si no, responde solo esto y no sigas: «El módulo Proyectos / PMO está desactivado. Actívalo con `/configurar` (Etapa 4).»
+
+Reglas (semáforo, escalamiento, ciclo): [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md) — los umbrales salen de su tabla de parámetros (§0), nunca de valores propios.
 Cálculo de SPI/CPI/EAC: skill `valor-ganado`. Plantilla del informe: [estado.md](../../08_conocimiento/plantillas/proyecto/estado.md).
 
 ## 1. Alcance

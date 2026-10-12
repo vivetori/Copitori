@@ -41,13 +41,13 @@ Al terminar, queda listo para tu día a día.
 | [99_adjuntos/](99_adjuntos/) | Imágenes y PDFs que arrastres a una nota. |
 | [TASKS.md](TASKS.md) | Tus pendientes. |
 
-Los módulos opcionales se activan según tu rol durante la configuración: un CEO usa casi todos; un líder de área quizá solo Relaciones, Iniciativas y Equipo; un director de proyectos enciende además el módulo **Proyectos / PMO** dentro de `03_iniciativas/`.
+Los módulos opcionales se activan según tu rol durante la configuración: un CEO usa casi todos; un líder de área quizá solo Relaciones, Iniciativas y Equipo; un director de proyectos puede encender además el módulo **Proyectos / PMO** dentro de `03_iniciativas/` (viene desactivado; se enciende solo si lo eliges en `/configurar`).
 
 ### Si eres director de proyectos o lideras una PMO
 
-Di tu rol al saludar y Copitori se configura como tu cerebro de formulación y gestión de proyectos. El flujo:
-**hola** → `/configurar` (preset de rol) → `/kickoff` para arrancar tu proyecto con acta de constitución → planificación (EDT, cronograma y ruta crítica con el agente `planificador-proyectos`) → `/estado-semanal` cada corte (semáforo, valor ganado, borrador al sponsor) → `/cambio` cuando algo mueva alcance, fecha o costo → `/portafolio` para ver todos tus proyectos y las decisiones que esperan por ti → `/cierre` con lecciones que cambian el siguiente proyecto.
-Los umbrales de semáforo, escalamiento y autoridad de cambios viven en un solo SOP editable ([08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md)); el diseño del módulo, alineado con PMBOK 7 y los cinco grupos de procesos (y con marco lógico / MGA como opción para proyectos públicos), está en [08_conocimiento/modulo_proyectos.md](08_conocimiento/modulo_proyectos.md). Hay un proyecto de ejemplo completo en [03_iniciativas/_ejemplo_ampliacion_planta/](03_iniciativas/_ejemplo_ampliacion_planta/) para ver el resultado antes de cargar el tuyo.
+Di tu rol al saludar: Copitori te **propondrá** el módulo Proyectos / PMO y, si lo aceptas, se configura como tu cerebro de formulación y gestión de proyectos. El flujo:
+**hola** → `/configurar` (aceptas el preset de rol y decides si dejas los umbrales por defecto) → `/kickoff` para arrancar tu proyecto con acta de constitución → planificación (EDT, cronograma y ruta crítica con el agente `planificador-proyectos`) → `/estado-semanal` cada corte (semáforo, valor ganado, borrador al sponsor) → `/cambio` cuando algo mueva alcance, fecha o costo → `/portafolio` para ver todos tus proyectos y las decisiones que esperan por ti → `/cierre` con lecciones que cambian el siguiente proyecto.
+Los umbrales de semáforo, escalamiento y autoridad de cambios tienen valores por defecto sensatos y **se pueden cambiar cuando quieras** con `/configurar proyectos` o editando la tabla de parámetros de [08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md), el único lugar donde viven. El diseño del módulo, alineado con PMBOK 7 y los cinco grupos de procesos (y con marco lógico / MGA como opción para proyectos públicos), está en [08_conocimiento/modulo_proyectos.md](08_conocimiento/modulo_proyectos.md).
 
 ---
 
@@ -76,7 +76,7 @@ Escribe `/` para verlos. Los más usados:
 | `/cambio` | *(Proyectos / PMO)* Registra y evalúa una solicitud de cambio con su nivel de autoridad. |
 | `/portafolio` | *(Proyectos / PMO)* Todos tus proyectos en una pantalla y las decisiones que esperan por ti. |
 | `/cierre` | *(Proyectos / PMO)* Checklist de cierre, lecciones aprendidas y acta de cierre. |
-| `/configurar` | (Re)ejecuta el asistente de configuración. |
+| `/configurar` | (Re)ejecuta el asistente de configuración. `/configurar proyectos` ajusta los umbrales del módulo Proyectos / PMO. |
 
 ---
 

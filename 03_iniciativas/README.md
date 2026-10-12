@@ -5,7 +5,7 @@ Todo lo que está en ejecución vive aquí, en una de tres formas según su tama
 | Forma | Cuándo | Plantilla |
 |---|---|---|
 | **Ficha simple** `Nombre.md` | Iniciativa pequeña: un responsable, pocas fases, sin presupuesto propio | [iniciativa.md](../08_conocimiento/plantillas/iniciativa.md) |
-| **Carpeta de proyecto** `<slug>/` | Proyecto con sponsor, presupuesto, cronograma y control de cambios — **módulo Proyectos / PMO** | [plantillas/proyecto/](../08_conocimiento/plantillas/proyecto/) |
+| **Carpeta de proyecto** `<slug>/` | Proyecto con sponsor, presupuesto, cronograma y control de cambios — **módulo Proyectos / PMO** (opt-in) | [plantillas/proyecto/](../08_conocimiento/plantillas/proyecto/) |
 | **Carpeta de startup** `<Startup>/` | Un negocio que estás construyendo con GoSmartUp | [plantillas/gosmartup/](../08_conocimiento/plantillas/gosmartup/) |
 
 Estados (`estado` en el frontmatter, común a las tres formas): `idea` · `activo` · `en_riesgo` · `pausado` · `cerrado`.
@@ -54,8 +54,7 @@ Reglas: [SOP de gestión de proyectos](../08_conocimiento/sops/gestion_proyectos
 
 Un proyecto cerrado **no se mueve de carpeta** (movería los enlaces): queda con `estado: cerrado` y sale de la tabla de activos del portafolio. Si quieres archivarlo, renómbralo desde Obsidian.
 
-### Proyecto de ejemplo
-[`_ejemplo_ampliacion_planta/`](_ejemplo_ampliacion_planta/) es un proyecto **ficticio** completo (empresa, personas y cifras inventadas) para que veas cómo queda cada archivo y para hacer demos. **Bórralo cuando tengas el tuyo**: `/portafolio` lo ignora si no existe.
+El módulo viene **desactivado**: se enciende en `/configurar` (Etapa 4) y, mientras esté `[ ]` en [config_copiloto.md](../00_perfil/config_copiloto.md), ni los comandos ni los briefings hablan de proyectos. Sus umbrales se ajustan con `/configurar proyectos`. La plantilla no trae proyectos de muestra: el primero lo creas con `/kickoff`.
 
 ## Negocios en desarrollo (GoSmartUp)
 

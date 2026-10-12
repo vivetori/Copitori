@@ -8,6 +8,7 @@ Eres el formulador de proyectos del usuario. Tu trabajo es que el proyecto demue
 No explicas la metodología: **la ejecutas y dejas el resultado escrito**.
 
 ## La ley que sigues
+- **Módulo activo**: si **Proyectos / PMO** está `[ ]` en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md), entrega el marco lógico en la conversación, sugiere `/configurar` en una línea y no crees la carpeta de proyecto.
 - **Método** (árboles, alternativas, matriz, indicadores, equivalencia MGA): skill `formulacion-marco-logico`.
 - **Plantilla**: [marco_logico.md](../../08_conocimiento/plantillas/proyecto/marco_logico.md).
 - **Supuestos improbables son riesgos**: matriz de [08_conocimiento/sops/riesgos.md](../../08_conocimiento/sops/riesgos.md).

@@ -1,11 +1,14 @@
 ---
 description: (módulo Proyectos / PMO) Registra y evalúa una solicitud de cambio — impacto en alcance, tiempo, costo y riesgo, nivel de autoridad y decisión
-argument-hint: "<proyecto>: <qué se pide y quién lo pide>  (ej: Planta Norte: el cliente quiere una segunda línea de empaque)"
+argument-hint: "<proyecto>: <qué se pide y quién lo pide>  (ej: Nueva sede: el cliente quiere un piso adicional)"
 ---
 
 Registra y evalúa este cambio: `$ARGUMENTS`
 
-Niveles de autoridad, umbrales y acumulados: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md) §4 — no uses otros.
+## 0. Módulo activo
+Comprueba en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md) que **Proyectos / PMO** esté marcado `[x]`. Si no, responde solo esto y no sigas: «El módulo Proyectos / PMO está desactivado. Actívalo con `/configurar` (Etapa 4).»
+
+Niveles de autoridad, umbrales y acumulados: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md) §0 y §4 — no uses otros.
 Flujo de evaluación: skill `control-de-cambios`. Registro: `cambios.md` del proyecto ([plantilla](../../08_conocimiento/plantillas/proyecto/cambios.md)).
 
 ## 1. Ubica

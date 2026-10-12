@@ -36,6 +36,8 @@ Por eso, en una skill lo más importante es su `description`: es lo único que d
 
 Se combinan: un informe de estado aplica también `comunicacion-ejecutiva`, `presentar-numeros` y, en un proyecto del módulo PMO, `valor-ganado`.
 
+Las de *(Proyectos / PMO)* aplican su método cuando aparece el contexto, pero solo escriben carpetas de proyecto si el módulo está `[x]` en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md); si no, entregan el documento en la conversación y sugieren `/configurar`. Sus umbrales viven en la tabla de parámetros de [sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md) y se ajustan con `/configurar proyectos`.
+
 ## Las que vienen de fuera
 
 **Documentos** — Word, PowerPoint, Excel y PDF. Siempre disponibles: se activan al pedir un entregable con formato.

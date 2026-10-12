@@ -9,7 +9,7 @@
 
 - [x] **Relaciones** (`02_relaciones/`) — clientes o stakeholders
 - [x] **Iniciativas** (`03_iniciativas/`) — proyectos e iniciativas en ejecución (fichas simples)
-- [ ] **Proyectos / PMO** (`03_iniciativas/<proyecto>/`) — acta, EDT, cronograma, valor ganado, cambios, portafolio y cierre. Se enciende solo con el preset de rol de director de proyectos / PMO. Reglas: [08_conocimiento/sops/gestion_proyectos.md](../08_conocimiento/sops/gestion_proyectos.md)
+- [ ] **Proyectos / PMO** (`03_iniciativas/<proyecto>/`) — acta, EDT, cronograma, valor ganado, cambios, portafolio y cierre. **Desactivado por defecto**: se enciende solo si lo eliges en `/configurar` (Etapa 4; Copitori lo propone al detectar un rol de director de proyectos / PMO). Mientras esté `[ ]`, ningún comando ni briefing habla de proyectos. Umbrales configurables con `/configurar proyectos`; reglas: [08_conocimiento/sops/gestion_proyectos.md](../08_conocimiento/sops/gestion_proyectos.md)
 - [x] **Equipo y decisiones** (`07_equipo/`)
 - [ ] **Comercial** (`04_comercial/`) — pipeline y propuestas
 - [ ] **Finanzas** (`05_finanzas/`) — presupuesto y caja

@@ -1,9 +1,12 @@
 ---
 description: (módulo Proyectos / PMO) Arranca un proyecto — crea su carpeta desde las plantillas y construye el acta de constitución por etapas
-argument-hint: "<nombre del proyecto>  (ej: Ampliación Planta Norte)"
+argument-hint: "<nombre del proyecto>  (ej: Nueva sede regional)"
 ---
 
 Arranca el proyecto `$ARGUMENTS`.
+
+## 0. Módulo activo
+Comprueba en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md) que **Proyectos / PMO** esté marcado `[x]`. Si no, responde solo esto y no sigas: «El módulo Proyectos / PMO está desactivado. Actívalo con `/configurar` (Etapa 4) y vuelve a correr `/kickoff`.»
 
 Reglas del módulo: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md).
 Estructura de carpeta y frontmatter: [03_iniciativas/README.md](../../03_iniciativas/README.md).

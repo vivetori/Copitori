@@ -37,6 +37,8 @@ No dispares los tres bloques de golpe. Propón, confirma, avanza.
 
 ## Al cerrar
 
+Antes de escribir, comprueba que el módulo Proyectos / PMO esté `[x]` en [00_perfil/config_copiloto.md](../../../00_perfil/config_copiloto.md). Si está `[ ]`, entrega el acta en la conversación y sugiere en una línea activarlo con `/configurar` para guardarla como carpeta de proyecto; no crees la carpeta.
+
 1. Escribe `03_iniciativas/<slug>/acta_constitucion.md` con el frontmatter completo (`aliases` con el nombre del proyecto, `sponsor`, `pm`, `inicio`, `fin_objetivo`, `presupuesto`, `fase: inicio`).
 2. Pasa los riesgos iniciales a `riesgos.md` del proyecto y los interesados clave a `interesados.md` (skill `registro-interesados`).
 3. Agrega a [TASKS.md](../../../TASKS.md): firma del acta por el sponsor y reunión de kickoff, con fecha.

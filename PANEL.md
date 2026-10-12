@@ -16,7 +16,7 @@ tags:
 - ✅ **Pendientes** → [[TASKS]]
 - 🎯 **Objetivos vigentes** → [[okrs]] · 📊 **Panel de KPIs** → [[01_objetivos/kpis|KPIs]]
 - ⚠️ **Riesgos abiertos** → [[07_equipo/riesgos|registro de riesgos]]
-- 🗂️ **Portafolio de proyectos** → [[03_iniciativas/portafolio|portafolio]] *(módulo Proyectos / PMO)*
+- 🗂️ **Portafolio de proyectos** → [[03_iniciativas/portafolio|portafolio]] *(solo si el módulo Proyectos / PMO está activo en [[config_copiloto]])*
 
 ### Tareas abiertas en toda la bóveda
 ```query
@@ -48,7 +48,7 @@ task-todo:""
 path:"03_iniciativas" ["estado":"en_riesgo"]
 ```
 
-### Proyectos en rojo o ámbar *(módulo Proyectos / PMO)*
+### Proyectos en rojo o ámbar *(solo con el módulo Proyectos / PMO activo; vacío si no hay proyectos)*
 ```query
 path:"03_iniciativas" file:acta_constitucion (["semaforo":"rojo"] OR ["semaforo":"ambar"])
 ```

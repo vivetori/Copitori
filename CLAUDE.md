@@ -52,7 +52,7 @@ Si el usuario llega aquí en frío (`/configurar` con el entorno ya montado), pr
 
 ### Etapa 1 — Quién eres
 Pregunta (o deduce de lo que ya dijo): nombre, **rol/cargo**, qué lideras (empresa completa / un área / un equipo), país/zona horaria, idioma de trabajo, cómo quieres que te trate (**tú/usted**), y opcionalmente cómo quieres llamar a tu copiloto (por defecto: Copitori).
-Detecta el **rol de gestor/director de proyectos o PMO** (director de proyectos, PM, líder de PMO, gerente de proyecto, coordinador de proyectos, formulador de proyectos): activa el preset de la Etapa 4.
+Detecta el **rol de gestor/director de proyectos o PMO** (director de proyectos, PM, líder de PMO, gerente de proyecto, coordinador de proyectos, formulador de proyectos): anótalo para **proponer** el preset de la Etapa 4. Detectarlo no activa nada.
 → Escribe todo en [00_perfil/identidad.md](00_perfil/identidad.md).
 
 ### Etapa 2 — Tu organización o área
@@ -70,15 +70,15 @@ Presenta los módulos y enciende solo los que apliquen a su rol (un CEO usa casi
 |---|---|---|
 | Relaciones (CRM ligero) | `02_relaciones/` | Todos (clientes o stakeholders) |
 | Iniciativas y proyectos | `03_iniciativas/` | Todos (fichas simples) |
-| **Proyectos / PMO** | `03_iniciativas/<proyecto>/` | Quien dirige proyectos con sponsor, presupuesto y fecha: acta, EDT, cronograma, valor ganado, cambios, portafolio y cierre |
+| **Proyectos / PMO** *(opt-in, desactivado por defecto)* | `03_iniciativas/<proyecto>/` | Quien dirige proyectos con sponsor, presupuesto y fecha: acta, EDT, cronograma, valor ganado, cambios, portafolio y cierre |
 | Equipo y decisiones | `07_equipo/` | Todo el que lidera personas |
 | Comercial (pipeline, propuestas) | `04_comercial/` | Roles con responsabilidad de venta |
 | Finanzas | `05_finanzas/` | Dueños de presupuesto / P&L |
 | Comunicación / marketing | `06_comunicacion/` | Roles con contenido o vocería |
 
-**Preset de rol — gestor/director de proyectos o PMO** (detectado en la Etapa 1): enciende **Proyectos / PMO**, Relaciones y Equipo y decisiones; en la Etapa 5 pregunta además por su herramienta de gestión de tareas/proyectos (Jira, Asana, ClickUp, Planner…); y en el Cierre el primer paso propuesto es **cargar su proyecto más importante con `/kickoff`**. Diseño del módulo: [08_conocimiento/modulo_proyectos.md](08_conocimiento/modulo_proyectos.md); reglas: [08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md).
+**Preset de rol — gestor/director de proyectos o PMO** (detectado en la Etapa 1): **propón** en una sola pregunta encender **Proyectos / PMO**, Relaciones y Equipo y decisiones, y marca `[x]` solo lo que el usuario confirme. Si acepta Proyectos / PMO: pregúntale en una línea «¿dejamos los umbrales por defecto o los ajustamos ahora?» (resume en 2 líneas la tabla de parámetros §0 de [08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md); no copies valores aquí — se pueden cambiar en cualquier momento con `/configurar proyectos`), en la Etapa 5 pregunta por su herramienta de gestión de tareas/proyectos (Jira, Asana, ClickUp, Planner…) y en el Cierre el primer paso propuesto es **cargar su proyecto más importante con `/kickoff`**. Si no lo acepta, el módulo queda `[ ]`: nada de proyectos aparece en briefings ni se ofrece `/kickoff`. Diseño del módulo: [08_conocimiento/modulo_proyectos.md](08_conocimiento/modulo_proyectos.md).
 
-→ Marca los activos en [00_perfil/config_copiloto.md](00_perfil/config_copiloto.md). Los módulos inactivos siguen existiendo pero no los usas en briefings.
+→ Marca los activos en [00_perfil/config_copiloto.md](00_perfil/config_copiloto.md). Los módulos inactivos siguen existiendo pero no los usas en briefings. **Proyectos / PMO nunca se asume activo**: solo cuenta la marca `[x]` de ese archivo.
 
 ### Etapa 5 — Tus herramientas (MCPs)
 Pregunta qué tiene conectado (correo, calendario, drive, CRM, notas, finanzas…). Esto define qué comandos pueden ir a buscar datos vivos y cuáles trabajan solo con los archivos locales. Si no tiene nada conectado, está bien: el copiloto funciona 100% con los archivos.
@@ -200,7 +200,7 @@ Van a [99_adjuntos/](99_adjuntos/) y se referencian con `![[archivo.png]]`. No d
 
 En [.claude/commands/](.claude/commands/):
 - `/instalar` — deja el entorno listo: diagnóstico, Obsidian, bóveda y estructura, paso a paso
-- `/configurar` — (re)ejecuta el asistente de configuración
+- `/configurar` — (re)ejecuta el asistente de configuración; `/configurar proyectos` ajusta los umbrales del módulo Proyectos / PMO
 - `/resumen-dia` — briefing matutino: agenda + correos + pendientes + lo que importa hoy
 - `/triage` — triage del inbox: clasifica y redacta borradores en tu voz
 - `/seguimiento` — detecta seguimientos pendientes (relaciones, correos, compromisos) y propone los mensajes
@@ -220,6 +220,8 @@ En [.claude/commands/](.claude/commands/):
 - `/cambio` — *(módulo Proyectos / PMO)* registra y evalúa una solicitud de cambio: impacto, nivel de autoridad, decisión
 - `/portafolio` — *(módulo Proyectos / PMO)* vista de todos los proyectos: semáforo, próximo hito, bloqueos y decisiones que esperan por ti
 - `/cierre` — *(módulo Proyectos / PMO)* cierra un proyecto: checklist, lecciones aprendidas, acta de cierre
+
+Los cinco comandos del módulo Proyectos / PMO comprueban primero que el módulo esté `[x]` en [00_perfil/config_copiloto.md](00_perfil/config_copiloto.md); si no, responden en una línea cómo activarlo (`/configurar`) y no se ejecutan. Sus umbrales (semáforo, escalamiento, autoridad de cambios, contingencia) son configurables en cualquier momento con `/configurar proyectos`; viven solo en la tabla §0 de [08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md).
 
 ## Subagentes especializados
 
@@ -276,6 +278,8 @@ Las skills se activan **solas** cuando aparece su contexto — no las invoca nad
 | `formulacion-marco-logico` | Formular un proyecto público, de cooperación o en MGA *(Proyectos / PMO, opcional)* |
 
 Se combinan entre sí y con las de documentos (Word, PowerPoint, Excel, PDF) y `dataviz`, siempre disponibles.
+
+Las skills marcadas *(Proyectos / PMO)* aplican su método cuando aparece el contexto, pero **solo crean o escriben carpetas de proyecto si el módulo está `[x]`** en [00_perfil/config_copiloto.md](00_perfil/config_copiloto.md); si está `[ ]`, entregan el documento en la conversación y sugieren `/configurar` en una línea.
 
 **Aplícalas sin anunciarlas.** Una skill es método, no un tema de conversación: no digas "voy a usar la skill X", simplemente entrega el trabajo bien hecho.
 

@@ -24,7 +24,7 @@ Proyecto · periodo · responsable · **semáforo**.
 
 **Regla dura**: un proyecto pasa a rojo el día que se sabe, no el día que ya no hay remedio.
 
-Si el proyecto es una carpeta del módulo Proyectos / PMO (tiene `acta_constitucion.md` y `cronograma.md`), **el color no se decide aquí**: sale de los umbrales de SPI, CPI, hitos y bloqueos del [SOP de gestión de proyectos](../../../08_conocimiento/sops/gestion_proyectos.md) —incluida la regla del amarillo que dura tres cortes— y las cifras se calculan con la skill `valor-ganado`. La tabla de arriba es lo que el color **significa** para quien lee; el SOP es lo que lo **fija**.
+Si el módulo Proyectos / PMO está activo en [config_copiloto.md](../../../00_perfil/config_copiloto.md) y el proyecto es una carpeta del módulo (tiene `acta_constitucion.md` y `cronograma.md`), **el color no se decide aquí**: sale de los umbrales de SPI, CPI, hitos y bloqueos del [SOP de gestión de proyectos](../../../08_conocimiento/sops/gestion_proyectos.md) —incluida la regla del amarillo que dura tres cortes— y las cifras se calculan con la skill `valor-ganado`. La tabla de arriba es lo que el color **significa** para quien lee; el SOP es lo que lo **fija**.
 
 Si cambió de color desde el último informe, **dilo en la primera línea y explica por qué**. Es lo primero que se busca.
 

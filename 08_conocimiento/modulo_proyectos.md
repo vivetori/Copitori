@@ -69,7 +69,8 @@ resiliencia → plan de recuperación en el informe; cambio → control de cambi
 ### SOP (dueño único de las reglas)
 [sops/gestion_proyectos.md](sops/gestion_proyectos.md): semáforo por SPI/CPI/hitos/bloqueos, escalamiento al
 sponsor, ciclo de informe, niveles de autoridad de cambios con acumulados, reservas, riesgos del proyecto,
-criterios de cierre, lecciones, cadencia de comunicación. Valores por defecto marcados como editables.
+criterios de cierre, lecciones, cadencia de comunicación. Todos los números están en una sola tabla de
+parámetros (§0) con valores por defecto, editable a mano o con `/configurar proyectos`.
 
 ### Plantillas
 [plantillas/proyecto/](plantillas/proyecto/): acta, interesados, EDT, cronograma, riesgos, cambios, estado,
@@ -108,12 +109,24 @@ lecciones, acta de cierre, marco lógico. Las reuniones usan [reunion.md](planti
 - **Cálculo automático (scripts) del valor ganado.** La tabla del cronograma es pequeña; el agente la calcula y declara el método. Un script escondería supuestos (regla de avance, % planificado lineal) que deben verse.
 - **Metodologías ágiles como módulo aparte.** El ciclo (acta → línea base → cortes → cambios → cierre) sirve a un proyecto iterativo con cortes de sprint; si un usuario necesita backlog y velocidad, es una Ola 4 propia (ver [bancos_skills_y_agentes.md](bancos_skills_y_agentes.md)).
 
-## 6. Preset de rol en `/configurar`
+## 6. Activación: opt-in en `/configurar`
 
-Si en la Etapa 1 el usuario se identifica como gestor/director de proyectos, líder de PMO o similar, la
-Etapa 4 enciende **Proyectos / PMO**, **Relaciones** y **Equipo y decisiones**, registra la herramienta
-de gestión de tareas/proyectos si la tiene, y el cierre propone como primer paso `/kickoff` con su
-proyecto más importante. Los demás módulos siguen siendo opcionales.
+El módulo viene **desactivado** (`[ ]` en [../00_perfil/config_copiloto.md](../00_perfil/config_copiloto.md)) y nada
+del motor lo asume activo: `/resumen-dia`, `/revision-semanal`, `/captura` y el radar del PANEL condicionan
+todo lo de proyectos a esa marca, y los cinco comandos del módulo la comprueban antes de ejecutarse (si está
+`[ ]`, responden en una línea cómo activarlo).
+
+**Preset de rol como propuesta.** Si en la Etapa 1 el usuario se identifica como gestor/director de proyectos,
+líder de PMO o similar, la Etapa 4 **propone** en una pregunta encender **Proyectos / PMO**, **Relaciones** y
+**Equipo y decisiones**; se marca `[x]` solo lo que confirme. Si acepta Proyectos / PMO, se le pregunta si deja
+los umbrales por defecto o los ajusta (mini-etapa de umbrales), se registra su herramienta de gestión de
+tareas/proyectos si la tiene, y el cierre propone como primer paso `/kickoff` con su proyecto más importante.
+Si no lo acepta, no se vuelve a ofrecer `/kickoff` ni se mencionan proyectos en briefings.
+
+**Umbrales configurables.** Todos los números del módulo viven en la tabla de parámetros §0 de
+[sops/gestion_proyectos.md](sops/gestion_proyectos.md) (códigos S1–S8, E1–E3, C1–C5, R1, I1–I4, L1). Se cambian
+en cualquier momento con `/configurar proyectos` o diciendo "ajusta los umbrales del semáforo"; comandos,
+skills y agentes los leen de ahí y nunca llevan valores propios.
 
 ## 7. Datos vivos: qué usa cada comando si está conectado
 
@@ -126,9 +139,9 @@ proyecto más importante. Los demás módulos siguen siendo opcionales.
 
 Sin ninguna, el módulo funciona al 100 % con los archivos y lo dice en cada corte.
 
-## 8. Ejemplo incluido
+## 8. La plantilla viene sin proyectos
 
-[`03_iniciativas/_ejemplo_ampliacion_planta/`](../03_iniciativas/_ejemplo_ampliacion_planta/): proyecto
-ficticio "Ampliación Planta Norte" ($2.400M COP, 32 semanas, semana 21, SPI 0,87, CPI 0,94, EAC $2.560M,
-segundo corte en ámbar, un cambio de nivel 3 pendiente). Todos los archivos del módulo, rellenos de forma
-corta, para ver el resultado y para demos en vivo. Se borra cuando el usuario tiene el suyo.
+`03_iniciativas/` no trae ningún proyecto de muestra: el primero lo crea el usuario con `/kickoff`.
+[portafolio.md](../03_iniciativas/portafolio.md) está vacío (encabezado y tabla sin filas) hasta que `/portafolio`
+lo rellene. Un ejemplo numérico de valor ganado, para entender la lectura de SPI/CPI/EAC, está dentro de la
+skill `valor-ganado`, no en la bóveda.

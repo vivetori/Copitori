@@ -1,9 +1,12 @@
 ---
 description: (módulo Proyectos / PMO) Cierra un proyecto — checklist de cierre, sesión de lecciones aprendidas, acta de cierre y archivo
-argument-hint: "<proyecto>  [cancelado]  (ej: Planta Norte · ej: Portal Clientes cancelado)"
+argument-hint: "<proyecto>  [cancelado]  (ej: Nueva sede · ej: Portal de clientes cancelado)"
 ---
 
 Cierra el proyecto `$ARGUMENTS`. Por entrega o por cancelación: el checklist es el mismo.
+
+## 0. Módulo activo
+Comprueba en [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md) que **Proyectos / PMO** esté marcado `[x]`. Si no, responde solo esto y no sigas: «El módulo Proyectos / PMO está desactivado. Actívalo con `/configurar` (Etapa 4).»
 
 Criterios de cierre y lecciones: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md) §7 y §8.
 Plantillas: [acta_cierre.md](../../08_conocimiento/plantillas/proyecto/acta_cierre.md), [lecciones_aprendidas.md](../../08_conocimiento/plantillas/proyecto/lecciones_aprendidas.md).

@@ -15,7 +15,7 @@ y márcalo `[ASUMIDO: ...]` — ya lo corrijo después.
 |---|---|
 | Tarea o compromiso mío | [TASKS.md](../../TASKS.md), con prioridad y fecha absoluta |
 | Novedad sobre una persona u organización | Su ficha en [02_relaciones/](../../02_relaciones/): historia + próximos pasos |
-| Avance, traba o cambio de alcance de un proyecto | Bitácora de su ficha en [03_iniciativas/](../../03_iniciativas/). Si es una carpeta del módulo Proyectos / PMO: «Novedades de la semana» del informe de estado en curso (`estado/`), y un cambio de alcance se registra con `/cambio` |
+| Avance, traba o cambio de alcance de un proyecto | Bitácora de su ficha en [03_iniciativas/](../../03_iniciativas/). Solo si el módulo Proyectos / PMO está activo en [config_copiloto.md](../../00_perfil/config_copiloto.md) y el proyecto es una carpeta del módulo: «Novedades de la semana» del informe de estado en curso (`estado/`), y un cambio de alcance se registra con `/cambio` |
 | Algo que se decidió | [07_equipo/decisiones.md](../../07_equipo/decisiones.md), con la plantilla [decision.md](../../08_conocimiento/plantillas/decision.md) |
 | Algo que puede salir mal | [07_equipo/riesgos.md](../../07_equipo/riesgos.md) — evalúa según [sops/riesgos.md](../../08_conocimiento/sops/riesgos.md) |
 | Cifra o dato de negocio | El archivo del módulo que corresponda ([05_finanzas/](../../05_finanzas/), [04_comercial/pipeline.md](../../04_comercial/pipeline.md)) |
