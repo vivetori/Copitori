@@ -136,6 +136,32 @@ y se reencuadró a fracasos de negocio; `project-status-report` traía umbrales 
 codificados que se eliminaron; `business-case-builder` traía modelos financieros de SaaS que se
 sustituyeron por delegación en el agente `analista-financiero`.
 
+### ✅ Ola 5 — Módulo Proyectos / PMO *(hecho 2026-10-12)*
+Construido con el mismo criterio: **ninguna skill de terceros instalada**; método propio alineado con
+PMBOK 7 y los cinco grupos de procesos, reglas en un solo SOP. Diseño completo en
+[modulo_proyectos.md](modulo_proyectos.md).
+
+| Hueco | Entregado |
+|---|---|
+| Arranque, planificación, control, portafolio y cierre | [`/kickoff`](../.claude/commands/kickoff.md), [`/estado-semanal`](../.claude/commands/estado-semanal.md), [`/cambio`](../.claude/commands/cambio.md), [`/portafolio`](../.claude/commands/portafolio.md), [`/cierre`](../.claude/commands/cierre.md) |
+| Método profundo de planificación, control y formulación | agentes [`planificador-proyectos`](../.claude/agents/planificador-proyectos.md), [`controlador-proyectos`](../.claude/agents/controlador-proyectos.md), [`formulador-proyectos`](../.claude/agents/formulador-proyectos.md) |
+| Skills que se disparan solas | [acta-de-constitucion](../.claude/skills/acta-de-constitucion/), [edt-y-cronograma](../.claude/skills/edt-y-cronograma/), [registro-interesados](../.claude/skills/registro-interesados/), [valor-ganado](../.claude/skills/valor-ganado/), [control-de-cambios](../.claude/skills/control-de-cambios/), [lecciones-aprendidas](../.claude/skills/lecciones-aprendidas/), [formulacion-marco-logico](../.claude/skills/formulacion-marco-logico/) |
+| Reglas con dueño único | [sops/gestion_proyectos.md](sops/gestion_proyectos.md) |
+
+**Plugins oficiales de Anthropic que pueden apoyar** (apoyo de formato o método, nunca fuente de reglas):
+
+| Plugin / skill | Puede servir para | Qué ignorar |
+|---|---|---|
+| `operations:status-report` | Formato alternativo de informe hacia afuera | Sus semáforos y umbrales: el color lo fija [sops/gestion_proyectos.md](sops/gestion_proyectos.md) |
+| `operations:risk-assessment` | Preguntas guía para levantar riesgos en un taller | Su escala: la matriz es la de [sops/riesgos.md](sops/riesgos.md) |
+| `operations:change-request` | Formato de solicitud de cambio para un tercero | Sus niveles de aprobación: mandan los del SOP §4 |
+| `product-management:sprint-planning` | Si un proyecto se ejecuta por sprints, planificación de la iteración | Sus métricas de velocidad como criterio de semáforo |
+| `product-management:stakeholder-update` | Variantes de mensaje por audiencia | Su tono: manda [voz_y_estilo.md](voz_y_estilo.md) |
+| `operations:capacity-plan` | Carga de PMs y equipos cuando hay muchos proyectos | Sus umbrales de utilización: los decide `gestor-de-equipo` con datos de la bóveda |
+
+Regla de precedencia, igual que siempre: **los SOP y comandos locales mandan**. Se declaran en
+[../00_perfil/config_copiloto.md](../00_perfil/config_copiloto.md) y se activan solo con el módulo.
+
 ### Ola 4 — Lo que ningún banco te va a dar *(pendiente)*
 Las skills que codifican **tu** negocio en concreto: metodología de cotización, criterios de
 "cliente ideal", tu ritual de cierre de mes, cómo calificas a un proveedor. Ahí está la ventaja

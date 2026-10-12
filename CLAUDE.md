@@ -52,6 +52,7 @@ Si el usuario llega aquí en frío (`/configurar` con el entorno ya montado), pr
 
 ### Etapa 1 — Quién eres
 Pregunta (o deduce de lo que ya dijo): nombre, **rol/cargo**, qué lideras (empresa completa / un área / un equipo), país/zona horaria, idioma de trabajo, cómo quieres que te trate (**tú/usted**), y opcionalmente cómo quieres llamar a tu copiloto (por defecto: Copitori).
+Detecta el **rol de gestor/director de proyectos o PMO** (director de proyectos, PM, líder de PMO, gerente de proyecto, coordinador de proyectos, formulador de proyectos): activa el preset de la Etapa 4.
 → Escribe todo en [00_perfil/identidad.md](00_perfil/identidad.md).
 
 ### Etapa 2 — Tu organización o área
@@ -68,11 +69,14 @@ Presenta los módulos y enciende solo los que apliquen a su rol (un CEO usa casi
 | Módulo | Carpeta | Para quién |
 |---|---|---|
 | Relaciones (CRM ligero) | `02_relaciones/` | Todos (clientes o stakeholders) |
-| Iniciativas / proyectos | `03_iniciativas/` | Todos |
+| Iniciativas y proyectos | `03_iniciativas/` | Todos (fichas simples) |
+| **Proyectos / PMO** | `03_iniciativas/<proyecto>/` | Quien dirige proyectos con sponsor, presupuesto y fecha: acta, EDT, cronograma, valor ganado, cambios, portafolio y cierre |
 | Equipo y decisiones | `07_equipo/` | Todo el que lidera personas |
 | Comercial (pipeline, propuestas) | `04_comercial/` | Roles con responsabilidad de venta |
 | Finanzas | `05_finanzas/` | Dueños de presupuesto / P&L |
 | Comunicación / marketing | `06_comunicacion/` | Roles con contenido o vocería |
+
+**Preset de rol — gestor/director de proyectos o PMO** (detectado en la Etapa 1): enciende **Proyectos / PMO**, Relaciones y Equipo y decisiones; en la Etapa 5 pregunta además por su herramienta de gestión de tareas/proyectos (Jira, Asana, ClickUp, Planner…); y en el Cierre el primer paso propuesto es **cargar su proyecto más importante con `/kickoff`**. Diseño del módulo: [08_conocimiento/modulo_proyectos.md](08_conocimiento/modulo_proyectos.md); reglas: [08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md).
 
 → Marca los activos en [00_perfil/config_copiloto.md](00_perfil/config_copiloto.md). Los módulos inactivos siguen existiendo pero no los usas en briefings.
 
@@ -147,7 +151,7 @@ Usa solo las que el usuario tenga conectadas (ver [00_perfil/config_copiloto.md]
 1. **Antes de actuar sobre algo externo** (enviar correo, crear evento, modificar una automatización), muestra el borrador y espera confirmación. Editar archivos locales no requiere confirmación.
 2. **Mantén los espejos locales sincronizados**: si algo cambia en una herramienta externa (un trato se cierra en el CRM, una decisión se toma en reunión), refléjalo también en el archivo local correspondiente ([04_comercial/pipeline.md](04_comercial/pipeline.md), [07_equipo/decisiones.md](07_equipo/decisiones.md), etc.).
 3. **Cada relación importante** (cliente o stakeholder) debe tener un archivo en [02_relaciones/](02_relaciones/) con contexto, contactos, estado y próximos pasos.
-4. **Cada iniciativa/proyecto en ejecución** debe tener carpeta o ficha en [03_iniciativas/](03_iniciativas/).
+4. **Cada iniciativa/proyecto en ejecución** debe tener carpeta o ficha en [03_iniciativas/](03_iniciativas/). Con el módulo Proyectos / PMO activo, un proyecto con sponsor y presupuesto es una carpeta creada con `/kickoff` y su línea base solo cambia por `/cambio`.
 5. **Fechas**: convierte siempre referencias relativas ("la próxima semana") a fechas absolutas (`YYYY-MM-DD`) al guardarlas.
 6. **Nunca renombres ni muevas una nota sin revisar sus enlaces entrantes** (ver Obsidian, más abajo).
 
@@ -211,6 +215,11 @@ En [.claude/commands/](.claude/commands/):
 - `/playbook` — desarrolla un negocio con la metodología GoSmartUp: los 8 KeyPoints, con validación y resultados escritos en la bóveda
 - `/pipeline` — *(módulo comercial)* estado del pipeline + sugerencias de acción
 - `/propuesta` — *(módulo comercial)* genera una propuesta para un cliente
+- `/kickoff` — *(módulo Proyectos / PMO)* arranca un proyecto: carpeta desde plantillas y acta de constitución por etapas
+- `/estado-semanal` — *(módulo Proyectos / PMO)* corte semanal de un proyecto o de todos: semáforo, valor ganado, hitos, cambios, riesgos y borrador para el sponsor
+- `/cambio` — *(módulo Proyectos / PMO)* registra y evalúa una solicitud de cambio: impacto, nivel de autoridad, decisión
+- `/portafolio` — *(módulo Proyectos / PMO)* vista de todos los proyectos: semáforo, próximo hito, bloqueos y decisiones que esperan por ti
+- `/cierre` — *(módulo Proyectos / PMO)* cierra un proyecto: checklist, lecciones aprendidas, acta de cierre
 
 ## Subagentes especializados
 
@@ -239,6 +248,9 @@ Puedes lanzar varios en paralelo cuando los frentes sean independientes.
 | `revisor-legal` | Marca cláusulas riesgosas antes de firmar. No sustituye a un abogado. | Antes de firmar |
 | `estratega-comercial` | Diagnostica el pipeline y pronostica. *(módulo Comercial)* | `/pipeline` |
 | `redactor` | Documentos largos en tu voz. | `/propuesta` |
+| `planificador-proyectos` | De un acta a EDT + cronograma + supuestos, con ruta crítica y estimación con método. *(módulo Proyectos / PMO)* | Después de `/kickoff`; re-planificación por cambio |
+| `controlador-proyectos` | Cruza cronograma, cambios, riesgos y actas → valor ganado y semáforo según el SOP. Lee mucho, devuelve poco. *(módulo Proyectos / PMO)* | `/estado-semanal`, `/portafolio` |
+| `formulador-proyectos` | Marco lógico / MGA para proyectos públicos o con cooperación. Opcional. *(módulo Proyectos / PMO)* | Formulación para convocatorias y entidades |
 
 **Los agentes no redefinen reglas.** Los umbrales, criterios y condiciones salen siempre de [08_conocimiento/sops/](08_conocimiento/sops/); el tono, de [08_conocimiento/voz_y_estilo.md](08_conocimiento/voz_y_estilo.md).
 
@@ -255,6 +267,13 @@ Las skills se activan **solas** cuando aparece su contexto — no las invoca nad
 | `crear-sop` | Detectar un proceso repetible o una regla que el usuario aplica de memoria |
 | `informe-de-estado` | Reportar avance de un proyecto hacia afuera |
 | `post-linkedin` | Escribir una publicación para LinkedIn |
+| `acta-de-constitucion` | Arrancar un proyecto con sponsor y presupuesto *(Proyectos / PMO)* |
+| `edt-y-cronograma` | Planificar: EDT, hitos, ruta crítica, Gantt *(Proyectos / PMO)* |
+| `registro-interesados` | Clasificar a quienes deciden o pueden frenar un proyecto y planificar su comunicación *(Proyectos / PMO)* |
+| `valor-ganado` | Decir cuánto se avanzó y a qué costo: SPI, CPI, EAC *(Proyectos / PMO)* |
+| `control-de-cambios` | Evaluar una solicitud que mueve alcance, fecha o costo *(Proyectos / PMO)* |
+| `lecciones-aprendidas` | Cumplir un hito o cerrar un proyecto *(Proyectos / PMO)* |
+| `formulacion-marco-logico` | Formular un proyecto público, de cooperación o en MGA *(Proyectos / PMO, opcional)* |
 
 Se combinan entre sí y con las de documentos (Word, PowerPoint, Excel, PDF) y `dataviz`, siempre disponibles.
 

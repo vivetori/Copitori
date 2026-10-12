@@ -41,7 +41,13 @@ Al terminar, queda listo para tu día a día.
 | [99_adjuntos/](99_adjuntos/) | Imágenes y PDFs que arrastres a una nota. |
 | [TASKS.md](TASKS.md) | Tus pendientes. |
 
-Los módulos opcionales se activan según tu rol durante la configuración: un CEO usa casi todos; un líder de área quizá solo Relaciones, Iniciativas y Equipo.
+Los módulos opcionales se activan según tu rol durante la configuración: un CEO usa casi todos; un líder de área quizá solo Relaciones, Iniciativas y Equipo; un director de proyectos enciende además el módulo **Proyectos / PMO** dentro de `03_iniciativas/`.
+
+### Si eres director de proyectos o lideras una PMO
+
+Di tu rol al saludar y Copitori se configura como tu cerebro de formulación y gestión de proyectos. El flujo:
+**hola** → `/configurar` (preset de rol) → `/kickoff` para arrancar tu proyecto con acta de constitución → planificación (EDT, cronograma y ruta crítica con el agente `planificador-proyectos`) → `/estado-semanal` cada corte (semáforo, valor ganado, borrador al sponsor) → `/cambio` cuando algo mueva alcance, fecha o costo → `/portafolio` para ver todos tus proyectos y las decisiones que esperan por ti → `/cierre` con lecciones que cambian el siguiente proyecto.
+Los umbrales de semáforo, escalamiento y autoridad de cambios viven en un solo SOP editable ([08_conocimiento/sops/gestion_proyectos.md](08_conocimiento/sops/gestion_proyectos.md)); el diseño del módulo, alineado con PMBOK 7 y los cinco grupos de procesos (y con marco lógico / MGA como opción para proyectos públicos), está en [08_conocimiento/modulo_proyectos.md](08_conocimiento/modulo_proyectos.md). Hay un proyecto de ejemplo completo en [03_iniciativas/_ejemplo_ampliacion_planta/](03_iniciativas/_ejemplo_ampliacion_planta/) para ver el resultado antes de cargar el tuyo.
 
 ---
 
@@ -65,13 +71,18 @@ Escribe `/` para verlos. Los más usados:
 | `/playbook` | Desarrolla un negocio con la metodología GoSmartUp: los 8 KeyPoints, validados y escritos. |
 | `/instalar` | Verifica el entorno e instala lo que falte (Obsidian, bóveda, estructura). |
 | `/pipeline`, `/propuesta` | *(módulo comercial)* |
+| `/kickoff` | *(Proyectos / PMO)* Arranca un proyecto: carpeta desde plantillas y acta de constitución por etapas. |
+| `/estado-semanal` | *(Proyectos / PMO)* Corte semanal: semáforo, valor ganado, hitos, cambios, riesgos y borrador al sponsor. |
+| `/cambio` | *(Proyectos / PMO)* Registra y evalúa una solicitud de cambio con su nivel de autoridad. |
+| `/portafolio` | *(Proyectos / PMO)* Todos tus proyectos en una pantalla y las decisiones que esperan por ti. |
+| `/cierre` | *(Proyectos / PMO)* Checklist de cierre, lecciones aprendidas y acta de cierre. |
 | `/configurar` | (Re)ejecuta el asistente de configuración. |
 
 ---
 
 ## 👥 Tu equipo directivo
 
-Doce agentes especializados. No los invocas: Copitori delega en ellos cuando la tarea encaja, o los pides por nombre. Cada uno mira el negocio desde un ángulo distinto.
+Quince agentes especializados. No los invocas: Copitori delega en ellos cuando la tarea encaja, o los pides por nombre. Cada uno mira el negocio desde un ángulo distinto.
 
 | | Agente | Para qué |
 |---|---|---|
@@ -87,6 +98,9 @@ Doce agentes especializados. No los invocas: Copitori delega en ellos cuando la 
 | ⚖️ | `revisor-legal` | Cláusulas que hay que mirar antes de firmar |
 | 📈 | `estratega-comercial` | Qué tratos son reales y cuáles están muertos *(Comercial)* |
 | ✍️ | `redactor` | Documentos largos en tu voz |
+| 🗺️ | `planificador-proyectos` | Del acta a la EDT, el cronograma y la ruta crítica *(Proyectos / PMO)* |
+| 📐 | `controlador-proyectos` | Valor ganado y semáforo honesto en cada corte *(Proyectos / PMO)* |
+| 🏛️ | `formulador-proyectos` | Marco lógico y MGA para proyectos públicos o con cooperación *(Proyectos / PMO, opcional)* |
 
 El más valioso suele ser el `contradictor`: es el único que no está de tu lado, y por diseño.
 
@@ -105,6 +119,9 @@ No se invocan. Se activan cuando aparece la situación, y se combinan entre sí.
 | `crear-sop` | Dices "siempre lo hacemos así". Lo convierte en regla que el sistema aplica solo. |
 | `informe-de-estado` | Reportas avance a un cliente, sponsor o junta. Semáforo honesto y petición concreta. |
 | `post-linkedin` | Escribes en LinkedIn. El material sale de tu bóveda, no del aire — y filtra lo confidencial antes. |
+| `acta-de-constitucion` · `edt-y-cronograma` · `registro-interesados` | *(Proyectos / PMO)* Arrancas y planificas un proyecto: acta por etapas, EDT con regla del 100 %, ruta crítica, interesados por poder/interés. |
+| `valor-ganado` · `control-de-cambios` · `lecciones-aprendidas` | *(Proyectos / PMO)* Lo controlas y lo cierras: SPI/CPI/EAC con la fórmula declarada, cambios con nivel de autoridad, lecciones que se vuelven regla. |
+| `formulacion-marco-logico` | *(Proyectos / PMO, opcional)* Formulas para una entidad pública, cooperación o MGA: árboles de problemas y objetivos, matriz de marco lógico. |
 
 Más las de documentos (Word, PowerPoint, Excel, PDF) y gráficos, siempre disponibles.
 ¿Tienes un proceso propio del negocio? Pídele a Copitori que lo convierta en skill — ver [.claude/skills/](.claude/skills/).

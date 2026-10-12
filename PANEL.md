@@ -16,6 +16,7 @@ tags:
 - ✅ **Pendientes** → [[TASKS]]
 - 🎯 **Objetivos vigentes** → [[okrs]] · 📊 **Panel de KPIs** → [[01_objetivos/kpis|KPIs]]
 - ⚠️ **Riesgos abiertos** → [[07_equipo/riesgos|registro de riesgos]]
+- 🗂️ **Portafolio de proyectos** → [[03_iniciativas/portafolio|portafolio]] *(módulo Proyectos / PMO)*
 
 ### Tareas abiertas en toda la bóveda
 ```query
@@ -47,6 +48,11 @@ task-todo:""
 path:"03_iniciativas" ["estado":"en_riesgo"]
 ```
 
+### Proyectos en rojo o ámbar *(módulo Proyectos / PMO)*
+```query
+path:"03_iniciativas" file:acta_constitucion (["semaforo":"rojo"] OR ["semaforo":"ambar"])
+```
+
 ### Relaciones sin próximo paso definido
 ```query
 path:"02_relaciones" -"Próximos pasos"
@@ -72,6 +78,7 @@ path:"07_equipo/riesgos" (Crítico OR Alto)
 - **Condiciones comerciales** → [[08_conocimiento/sops/condiciones_comerciales|condiciones comerciales]] *(comercial)*
 - **Propuestas** → [[08_conocimiento/sops/propuestas|propuestas]] *(comercial)*
 - **Metodología GoSmartUp** → [[08_conocimiento/sops/metodologia_gosmartup|los 8 KeyPoints]] — cómo se desarrolla y valida un negocio
+- **Gestión de proyectos** → [[08_conocimiento/sops/gestion_proyectos|semáforo, cambios y cierre]] *(Proyectos / PMO)* — umbrales de SPI/CPI, escalamiento al sponsor, autoridad de cambios
 
 ## Tu configuración
 
@@ -85,6 +92,8 @@ path:"07_equipo/riesgos" (Crítico OR Alto)
 
 `/resumen-dia` · `/captura` · `/triage` · `/seguimiento` · `/reunion` · `/sintesis` · `/revision-semanal` · `/kpis` · `/junta` · `/guardar-reunion` · `/boveda` · `/playbook`
 
+Proyectos / PMO: `/kickoff` · `/estado-semanal` · `/cambio` · `/portafolio` · `/cierre`
+
 Mantenimiento: `/instalar` (entorno y Obsidian) · `/configurar` (tu perfil)
 
 ## Tu equipo directivo
@@ -95,5 +104,6 @@ Pídelos por nombre cuando los necesites; si no, Copitori delega solo.
 ⚠️ `analista-riesgos` · 💰 `analista-financiero` · 🤝 `negociador` · 👤 `gestor-de-equipo`
 🎯 `analista-competencia` · ⚖️ `revisor-legal` · 📈 `estratega-comercial` · ✍️ `redactor`
 🚀 `asesor-emprendimiento` — desarrolla tu negocio con los 8 KeyPoints de GoSmartUp
+🗺️ `planificador-proyectos` · 📐 `controlador-proyectos` · 🏛️ `formulador-proyectos` — módulo Proyectos / PMO
 
 > Guía de la bóveda Obsidian → [[OBSIDIAN]] · Bancos de skills y agentes → [[bancos_skills_y_agentes]]

@@ -9,5 +9,6 @@ Reglas para esta corrida:
 1. Si `00_perfil/identidad.md` ya está `CONFIGURADO`, no empieces de cero: muéstrame un resumen de la configuración actual y pregúntame **qué quiero ajustar** (puedo querer solo cambiar objetivos, o activar un módulo nuevo). Ve directo a esa etapa.
 2. Si está `SIN_CONFIGURAR`, corre las 6 etapas en orden.
 3. Trabaja por etapas, 2–4 preguntas por bloque, con borradores y supuestos `[ASUMIDO: ...]`. No me abrumes.
+   - **Preset de rol**: si en la Etapa 1 digo que soy gestor/director de proyectos, PM o líder de PMO, en la Etapa 4 enciende **Proyectos / PMO**, Relaciones y Equipo y decisiones sin preguntármelo uno por uno (confírmalo en una línea), en la Etapa 5 pregúntame por mi herramienta de gestión de tareas/proyectos (Jira, Asana, ClickUp, Planner…), y al cerrar propón como primer paso cargar mi proyecto más importante con `/kickoff`. Reglas del módulo: [08_conocimiento/sops/gestion_proyectos.md](../../08_conocimiento/sops/gestion_proyectos.md).
 4. Escribe los cambios en los archivos correspondientes a medida que avanzas (no esperes al final).
 5. Al terminar, deja `estado_configuracion: CONFIGURADO` con fecha y propón mis 3 primeros pasos.
