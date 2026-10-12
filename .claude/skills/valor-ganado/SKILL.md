@@ -42,6 +42,8 @@ Datos de entrada: la tabla de paquetes de [cronograma.md](../../../08_conocimien
 
 Si CPI y SPI difieren mucho, da la 1 y la 3: el rango es la información.
 
+**Ejemplo ilustrativo** (cifras inventadas): un proyecto de 32 semanas con BAC $2.400M llega a la semana 21 con PV $1.517M, EV $1.323M y AC $1.411M. SV = −$194M y CV = −$88M; SPI = 0,87 (por cada peso que debía estar hecho hay 0,87) y CPI = 0,94. EAC típico = 2.400 / 0,94 ≈ $2.560M (VAC −$160M); si el sobrecosto fue puntual, EAC = 1.411 + 1.077 = $2.488M. TCPI = 1.077 / 989 = 1,09: el resto tendría que rendir un 9 % mejor que el plan. Con los parámetros por defecto del SOP, SPI y CPI caen en la banda ámbar; el color final lo fija el SOP cruzando también hitos y bloqueos.
+
 ## 3. Fecha fin estimada
 
 El SPI tiende a 1 cuando el proyecto se acerca al final (el PV se agota), así que **no sirve solo para estimar la fecha**. Úsalo como alerta temprana y cruza con:
