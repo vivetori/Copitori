@@ -142,6 +142,7 @@ Usa solo las que el usuario tenga conectadas (ver [00_perfil/config_copiloto.md]
 | Resúmenes de reuniones grabadas | Transcripción (Fireflies, etc.) |
 | Datos financieros | Finanzas / contabilidad |
 | Automatizaciones | Automatización (n8n, Make, Zapier) |
+| Rastrear portales (convocatorias, sitios sin API) | Scraping (Apify, etc.) o búsqueda web |
 | Documentos con formato (Word, PPT, Excel, PDF) | Skills de documentos (disponibles siempre) |
 
 ---
@@ -253,6 +254,7 @@ Puedes lanzar varios en paralelo cuando los frentes sean independientes.
 | `planificador-proyectos` | De un acta a EDT + cronograma + supuestos, con ruta crítica y estimación con método. *(módulo Proyectos / PMO)* | Después de `/kickoff`; re-planificación por cambio |
 | `controlador-proyectos` | Cruza cronograma, cambios, riesgos y actas → valor ganado y semáforo según el SOP. Lee mucho, devuelve poco. *(módulo Proyectos / PMO)* | `/estado-semanal`, `/portafolio` |
 | `formulador-proyectos` | Marco lógico / MGA para proyectos públicos o con cooperación. Opcional. *(módulo Proyectos / PMO)* | Formulación para convocatorias y entidades |
+| `vigia-convocatorias` | Busca convocatorias abiertas (web o scraping con Apify u otro conector), filtra por elegibilidad, extrae requisitos y fechas, y recomienda a cuál aplicar. *(módulo Proyectos / PMO)* | Antes de formular; "¿a qué podemos aplicar?" |
 
 **Los agentes no redefinen reglas.** Los umbrales, criterios y condiciones salen siempre de [08_conocimiento/sops/](08_conocimiento/sops/); el tono, de [08_conocimiento/voz_y_estilo.md](08_conocimiento/voz_y_estilo.md).
 

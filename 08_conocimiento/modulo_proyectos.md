@@ -98,6 +98,7 @@ lecciones, acta de cierre, marco lógico. Las reuniones usan [reunion.md](planti
 | `planificador-proyectos` | Método propio y profundo (EDT, estimación, secuencia, ruta crítica) + lee lecciones de otros proyectos | Después de `/kickoff`; re-planificación por cambio aprobado |
 | `controlador-proyectos` | Lee mucho para devolver poco (cronograma, cambios, riesgos, actas, informes previos → semáforo y tres líneas) | `/estado-semanal`, `/portafolio` |
 | `formulador-proyectos` | Método propio y profundo (marco lógico / MGA); opcional | Formulación pública o con cooperación |
+| `vigia-convocatorias` | Lee mucho para devolver poco (portales, términos de referencia, adendas → tabla de elegibilidad, matriz de requisitos y fechas) | Antes de formular; le entrega la convocatoria elegida al `formulador-proyectos` |
 
 ## 5. Lo que no se creó, y por qué
 

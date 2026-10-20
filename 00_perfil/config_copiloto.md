@@ -30,6 +30,7 @@
 | Gestión de tareas / proyectos | [ej. Jira, Asana, ClickUp, Planner] | [ ] *(módulo Proyectos / PMO: avance real por tarea)* |
 | Finanzas | [ej. wallet, ERP] | [ ] |
 | Automatización | [ej. n8n, Make] | [ ] |
+| Scraping / rastreo web | [ej. Apify] | [ ] *(módulo Proyectos / PMO: `vigia-convocatorias`)* |
 
 ## Plugins de skills activos
 > Skills externas instaladas en Claude Code. Copitori las usa como apoyo, pero **sus comandos

@@ -16,7 +16,7 @@ No explicas la metodología: **la ejecutas y dejas el resultado escrito**.
 
 ## Antes de formular
 1. **Lo que ya existe**: el acta o la idea en [03_iniciativas/](../../03_iniciativas/), [00_perfil/organizacion.md](../../00_perfil/organizacion.md) (quién presenta y con qué capacidad), [01_objetivos/okrs.md](../../01_objetivos/okrs.md) (a qué contribuye para el usuario, además de para la entidad).
-2. **La convocatoria o el formato de la entidad**, si el usuario lo tiene: sus términos mandan sobre la plantilla. Pídelo en una línea; si no está, formula con la plantilla y marca dónde habrá que adaptar.
+2. **La convocatoria o el formato de la entidad**, si el usuario lo tiene: sus términos mandan sobre la plantilla. Pídelo en una línea; si no está, formula con la plantilla y marca dónde habrá que adaptar. Si aún no hay convocatoria elegida, sugiere primero al agente `vigia-convocatorias`; si ya la eligió, usa su matriz de requisitos.
 3. **Datos de población y problema**: busca en la bóveda y en las herramientas conectadas (búsqueda web si existe, según [00_perfil/config_copiloto.md](../../00_perfil/config_copiloto.md)). Toda cifra con fuente citada o `[ASUMIDO: ...]` con el dato que la confirmaría.
 
 ## Cómo formulas

@@ -82,7 +82,7 @@ Escribe `/` para verlos. Los más usados:
 
 ## 👥 Tu equipo directivo
 
-Quince agentes especializados. No los invocas: Copitori delega en ellos cuando la tarea encaja, o los pides por nombre. Cada uno mira el negocio desde un ángulo distinto.
+Dieciséis agentes especializados. No los invocas: Copitori delega en ellos cuando la tarea encaja, o los pides por nombre. Cada uno mira el negocio desde un ángulo distinto.
 
 | | Agente | Para qué |
 |---|---|---|
@@ -101,6 +101,7 @@ Quince agentes especializados. No los invocas: Copitori delega en ellos cuando l
 | 🗺️ | `planificador-proyectos` | Del acta a la EDT, el cronograma y la ruta crítica *(Proyectos / PMO)* |
 | 📐 | `controlador-proyectos` | Valor ganado y semáforo honesto en cada corte *(Proyectos / PMO)* |
 | 🏛️ | `formulador-proyectos` | Marco lógico y MGA para proyectos públicos o con cooperación *(Proyectos / PMO, opcional)* |
+| 🔭 | `vigia-convocatorias` | Convocatorias abiertas, elegibilidad, requisitos y fechas: a cuál aplicar *(Proyectos / PMO)* |
 
 El más valioso suele ser el `contradictor`: es el único que no está de tu lado, y por diseño.
 
