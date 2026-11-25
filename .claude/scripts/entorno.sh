@@ -7,6 +7,7 @@
 #   bash .claude/scripts/entorno.sh reparar-estructura   crea las carpetas que falten
 #
 # Todo lo que modifica el sistema está en subcomandos explícitos: `verificar` solo lee.
+# En Windows sin bash, el gemelo es entorno.ps1 (mismos subcomandos y mismo bloque --- ESTADO ---).
 
 set -uo pipefail
 
@@ -22,9 +23,10 @@ esac
 
 CARPETAS="00_perfil 01_objetivos 02_relaciones 03_iniciativas 04_comercial 05_finanzas
 06_comunicacion 07_equipo 08_conocimiento 08_conocimiento/plantillas 08_conocimiento/plantillas/proyecto
-08_conocimiento/sops 09_bitacora 99_adjuntos .claude/commands .claude/agents .claude/skills .claude/scripts .obsidian"
+08_conocimiento/sops 09_bitacora 99_adjuntos .claude/commands .claude/agents .claude/skills .claude/scripts .obsidian
+.agents/skills .codex .codex/agents"
 
-ARCHIVOS="CLAUDE.md PANEL.md README.md TASKS.md OBSIDIAN.md
+ARCHIVOS="CLAUDE.md AGENTS.md PANEL.md README.md TASKS.md OBSIDIAN.md
 00_perfil/identidad.md 00_perfil/organizacion.md 00_perfil/config_copiloto.md
 01_objetivos/okrs.md .obsidian/app.json .obsidian/core-plugins.json"
 
@@ -49,7 +51,8 @@ ruta_obsidian() {
         [ -e "$r" ] && { printf '%s' "$r"; return 0; }
       done ;;
     windows)
-      for r in "${LOCALAPPDATA:-$HOME/AppData/Local}/Obsidian/Obsidian.exe" \
+      for r in "${LOCALAPPDATA:-$HOME/AppData/Local}/Programs/Obsidian/Obsidian.exe" \
+               "${LOCALAPPDATA:-$HOME/AppData/Local}/Obsidian/Obsidian.exe" \
                "/c/Program Files/Obsidian/Obsidian.exe"; do
         [ -e "$r" ] && { printf '%s' "$r"; return 0; }
       done ;;
@@ -92,6 +95,14 @@ motor_json() {
   echo ninguno
 }
 
+# Codex: CLI presente y artefactos generados (AGENTS.md, .agents/skills, .codex/agents) al día.
+codex_cli() { command -v codex >/dev/null 2>&1; }
+
+codex_sincronizado() {
+  command -v node >/dev/null 2>&1 || { echo sin_node; return; }
+  if node "$BOVEDA/.claude/scripts/sincronizar-codex.mjs" --verificar >/dev/null 2>&1; then echo si; else echo no; fi
+}
+
 estado_configuracion() {
   local f="$BOVEDA/00_perfil/identidad.md"
   [ -f "$f" ] || { echo "SIN_ARCHIVO"; return; }
@@ -119,13 +130,14 @@ archivos_faltantes() {
 # ---------------------------------------------------------------- verificar
 
 cmd_verificar() {
-  local obs gest cfg_estado carpetas archivos conf motor
+  local obs gest cfg_estado carpetas archivos conf motor sinc
   obs="$(ruta_obsidian || true)"
   gest="$(gestor_paquetes)"
   carpetas="$(carpetas_faltantes)"
   archivos="$(archivos_faltantes)"
   conf="$(estado_configuracion)"
   motor="$(motor_json)"
+  sinc="$(codex_sincronizado)"
 
   echo "=== Copitori · diagnóstico de entorno ==="
   echo "Bóveda: $BOVEDA"
@@ -151,6 +163,14 @@ cmd_verificar() {
   if [ -z "$archivos" ]; then ok "todos los archivos base presentes"; else falta "faltan archivos: $archivos"; fi
   if [ -d "$BOVEDA/.git" ]; then ok "repositorio git"; else aviso "sin git (opcional, pero da historial y respaldo)"; fi
   echo
+  echo "Codex (opcional; Claude Code no lo necesita)"
+  if codex_cli; then ok "Codex CLI instalado ($(command -v codex))"; else aviso "Codex CLI no encontrado (la app o la extensión del IDE también sirven)"; fi
+  case "$sinc" in
+    si)       ok "AGENTS.md, .agents/skills y .codex/agents al día con .claude/" ;;
+    no)       falta "artefactos de Codex desactualizados: corre node .claude/scripts/sincronizar-codex.mjs" ;;
+    sin_node) aviso "sin node: no puedo comprobar si los artefactos de Codex están al día" ;;
+  esac
+  echo
   echo "Configuración de Copitori"
   case "$conf" in
     CONFIGURADO) ok "perfil configurado" ;;
@@ -168,6 +188,8 @@ cmd_verificar() {
   echo "carpetas_faltantes=${carpetas:-ninguna}"
   echo "archivos_faltantes=${archivos:-ninguno}"
   echo "git=$([ -d "$BOVEDA/.git" ] && echo si || echo no)"
+  echo "codex_cli=$(codex_cli && echo si || echo no)"
+  echo "codex_sincronizado=$sinc"
   echo "configuracion=$conf"
 }
 
@@ -324,7 +346,7 @@ cmd_reparar_estructura() {
     fi
     # .gitkeep solo en carpetas de datos vacías, para que git las conserve
     case "$d" in
-      .claude/*|.obsidian) ;;
+      .claude/*|.obsidian|.agents/*|.codex|.codex/*) ;;
       *)
         if [ -z "$(ls -A "$BOVEDA/$d" 2>/dev/null)" ]; then
           : > "$BOVEDA/$d/.gitkeep"

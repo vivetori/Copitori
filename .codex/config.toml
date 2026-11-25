@@ -1,0 +1,11 @@
+# Configuración de proyecto de Codex para Copitori.
+# Codex solo carga esta capa (y .codex/hooks.json) si confías en el proyecto; cada hook pide además su propia aprobación.
+# Equivale a los permisos de .claude/settings.json: leer y editar dentro del espacio sin preguntar,
+# y pedir confirmación para lo que salga de él (instalar software, abrir aplicaciones, red).
+
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+
+[features]
+# Activado por defecto en Codex; se declara para que los hooks de .codex/hooks.json no dependan de la configuración global.
+hooks = true

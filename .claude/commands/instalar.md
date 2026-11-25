@@ -12,6 +12,8 @@ Regla dura: **antes de instalar software o abrir aplicaciones, pide confirmació
 
 Si algo falla, no te bloquees: registra qué quedó pendiente, sigue con lo demás y dilo al cerrar.
 
+**Windows sin bash:** cada `bash .claude/scripts/entorno.sh <subcomando>` de abajo tiene su gemelo en PowerShell, con los mismos subcomandos y la misma salida: `powershell -ExecutionPolicy Bypass -File .claude/scripts/entorno.ps1 <subcomando>`.
+
 ---
 
 ### Paso 1 · Diagnóstico
