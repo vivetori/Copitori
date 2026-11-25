@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)/.claude/scripts/arranque.sh\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude\\scripts\\arranque.ps1",
+            "timeout": 30,
+            "statusMessage": "Comprobando arranque de Copitori"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "d=\"$(git rev-parse --show-toplevel 2>/dev/null || pwd)/.claude/logs\"; mkdir -p \"$d\" && cat >> \"$d/auditoria.jsonl\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -File .claude\\scripts\\auditoria.ps1",
+            "timeout": 30,
+            "statusMessage": "Registrando auditoría"
+          }
+        ]
+      }
+    ]
+  }
+}

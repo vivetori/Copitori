@@ -1,5 +1,8 @@
-# Logs de auditoría de MCPs (crecen sin límite, no versionar)
+# Logs de auditoría de MCPs (crecen sin límite, no versionar). Claude Code y Codex escriben en .claude/logs/.
 .claude/logs/
+.codex/logs/
+
+# Codex: lo generado (AGENTS.md, .agents/skills/, .codex/agents/) SÍ se versiona; ver .claude/scripts/sincronizar-codex.mjs
 
 # Obsidian — la configuración de la bóveda SÍ se versiona (.obsidian/*.json),
 # pero no el estado local de cada persona.

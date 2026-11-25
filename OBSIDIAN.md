@@ -105,5 +105,7 @@ Ejecuta `/boveda` cada tanto (o al cierre de semana). Revisa:
 la clone abre la bóveda ya lista. Lo que no se versiona (ver [.gitignore](.gitignore)) es el
 estado local de cada persona: `workspace.json`, caché y archivos de recuperación.
 
+Las carpetas de los agentes (`.claude/`, `.agents/`, `.codex/`) no aparecen en Obsidian: empiezan por punto y Obsidian las oculta. `AGENTS.md` (la copia de `CLAUDE.md` para Codex) sí está en la raíz, pero queda excluido de la búsqueda, el grafo y el selector rápido (Ajustes → Archivos y enlaces → Archivos excluidos) para que no salga duplicado.
+
 Si usas Obsidian Sync, git y Sync pueden convivir, pero no dejes que ambos escriban a la vez
 en el mismo momento — cierra Obsidian antes de un `git pull` grande.

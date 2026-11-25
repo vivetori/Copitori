@@ -1,6 +1,6 @@
 # Copitori — Tu copiloto ejecutivo
 
-Copitori es una **plantilla de copiloto ejecutivo** para cualquier líder: CEO, gerente, director o líder de área. Funciona sobre [Claude Code](https://claude.com/claude-code): un espacio de archivos donde Claude lee tu contexto y trabaja por ti — briefings, seguimientos, propuestas, actas, análisis.
+Copitori es una **plantilla de copiloto ejecutivo** para cualquier líder: CEO, gerente, director o líder de área. Funciona sobre [Claude Code](https://claude.com/claude-code) y también sobre [Codex](https://developers.openai.com/codex) de OpenAI (ver [Usar Copitori en Codex](#-usar-copitori-en-codex-windows-y-mac)): un espacio de archivos donde el agente lee tu contexto y trabaja por ti — briefings, seguimientos, propuestas, actas, análisis.
 
 No es un chatbot genérico. Es un **jefe de gabinete**: proactivo, conoce tu negocio, respeta tus reglas y redacta en tu voz.
 
@@ -8,7 +8,7 @@ No es un chatbot genérico. Es un **jefe de gabinete**: proactivo, conoce tu neg
 
 ## ⚡ Cómo empezar (2 pasos)
 
-1. **Abre esta carpeta en Claude Code** (o cópiala como tu espacio de trabajo).
+1. **Abre esta carpeta en Claude Code o en Codex** (o cópiala como tu espacio de trabajo).
 2. **Salúdalo.** Escribe "hola".
 
 La primera vez, Copitori detecta que no está configurado y **te guía paso a paso**, en dos tramos:
@@ -129,6 +129,47 @@ Más las de documentos (Word, PowerPoint, Excel, PDF) y gráficos, siempre dispo
 
 ---
 
+## 🤖 Usar Copitori en Codex (Windows y Mac)
+
+Copitori funciona igual en [Codex](https://developers.openai.com/codex) (CLI, extensión del IDE o app de escritorio) que en Claude Code. Claude Code sigue siendo la fuente: lo de Codex se genera desde `.claude/` y se versiona junto con todo lo demás.
+
+| Pieza | Claude Code | Codex |
+|---|---|---|
+| Instrucciones | [CLAUDE.md](CLAUDE.md) | [AGENTS.md](AGENTS.md) (generado) |
+| Comandos | `/resumen-dia` | skill `$resumen-dia` en [.agents/skills/](.agents/skills/) (generada) |
+| Skills | [.claude/skills/](.claude/skills/) | [.agents/skills/](.agents/skills/) (copia generada) |
+| Agentes | [.claude/agents/](.claude/agents/) | [.codex/agents/](.codex/agents/) (generados) |
+| Hooks | [.claude/settings.json](.claude/settings.json) | [.codex/hooks.json](.codex/hooks.json) |
+| Permisos | [.claude/settings.json](.claude/settings.json) | [.codex/config.toml](.codex/config.toml): escribe dentro de la carpeta y pide aprobación para lo demás |
+
+**Primer uso:**
+
+1. **Abre la carpeta de Copitori en Codex.** En la CLI, entra a la carpeta y corre `codex`; en el IDE o la app, abre la carpeta como proyecto. Ábrela en la raíz, no en una subcarpeta.
+2. **Confía en el proyecto** cuando Codex lo pregunte. Sin eso no carga `.codex/config.toml` ni `.codex/hooks.json`.
+3. **Aprueba los dos hooks** (arranque y auditoría) cuando Codex los muestre. Son opcionales: si no los apruebas, Copitori arranca igual, porque [AGENTS.md](AGENTS.md) le indica al agente que revise la configuración al primer mensaje.
+4. **Salúdalo** ("hola"). Si aún no está configurado, arranca la instalación guiada (`$instalar`) y luego el asistente (`$configurar`).
+
+**Día a día:** los comandos se llaman con `$` en lugar de `/`: `$resumen-dia`, `$captura llamó Ana de Acme…`, `$kickoff Nueva sede`. También puedes pedirlo con tus palabras y Codex elige la skill por su descripción. Los agentes (`contradictor`, `archivista`…) se piden por nombre.
+
+**Windows:** los scripts de entorno tienen gemelos en PowerShell, así que no necesitas bash:
+
+```
+powershell -ExecutionPolicy Bypass -File .claude/scripts/entorno.ps1 verificar
+```
+
+En macOS y Linux se usa `bash .claude/scripts/entorno.sh verificar`, igual que en Claude Code.
+
+**Si modificas `.claude/` o CLAUDE.md** (un comando, un agente, una skill), regenera lo de Codex y versiona el resultado:
+
+```
+node .claude/scripts/sincronizar-codex.mjs              # regenera AGENTS.md, .agents/skills y .codex/agents
+node .claude/scripts/sincronizar-codex.mjs --verificar  # solo comprueba (sale con error si algo quedó viejo)
+```
+
+No edites los archivos generados a mano: llevan la marca "Generado por sincronizar-codex" y se sobrescriben. `/instalar` (o `$instalar`) avisa en el diagnóstico si quedaron desactualizados.
+
+---
+
 ## 🔮 Ábrelo en Obsidian
 
 Esta carpeta ya es una **bóveda de Obsidian** configurada. Instala [Obsidian](https://obsidian.md),
@@ -148,7 +189,7 @@ Detalles y convenciones de enlace → [OBSIDIAN.md](OBSIDIAN.md).
 
 ## 🧠 Cómo funciona por dentro
 
-- **El comportamiento** vive en [CLAUDE.md](CLAUDE.md) — es estable y no cambia entre usuarios.
+- **El comportamiento** vive en [CLAUDE.md](CLAUDE.md) — es estable y no cambia entre usuarios. Para Codex se genera [AGENTS.md](AGENTS.md) a partir de él.
 - **Tus datos** viven en `00_perfil/` y las demás carpetas — los rellenas tú (o el asistente).
 - **Tus reglas** viven en [08_conocimiento/sops/](08_conocimiento/sops/) con *dueño único*: cada umbral o condición se define una sola vez; los comandos la referencian, nunca la duplican.
 - Copitori usa las **herramientas (MCP)** que tengas conectadas (correo, calendario, CRM…). Si no tienes ninguna, funciona 100% con los archivos.
@@ -161,7 +202,9 @@ Para que sepas qué traes al descargarlo, [.claude/settings.json](.claude/settin
 - **`SessionStart`** → [`arranque.sh`](.claude/scripts/arranque.sh): al abrir la sesión, lee `00_perfil/identidad.md` para saber si ya te configuraste. Solo lee; no modifica nada ni sale de la carpeta.
 - **`PostToolUse`** en herramientas MCP → añade una línea a `.claude/logs/auditoria.jsonl` cada vez que Copitori usa una herramienta externa. Es tu registro local de qué se consultó y cuándo; nunca sale de tu equipo.
 
-El único script que modifica algo es [`entorno.sh`](.claude/scripts/entorno.sh), y solo cuando tú lo llamas desde `/instalar`: crea carpetas que falten, registra la bóveda en Obsidian (con respaldo de tu configuración previa) o instala Obsidian — esto último siempre pidiéndote permiso antes. `entorno.sh verificar` solo diagnostica.
+En Codex, [.codex/hooks.json](.codex/hooks.json) declara los mismos dos hooks (en Windows corren sus gemelos [`arranque.ps1`](.claude/scripts/arranque.ps1) y [`auditoria.ps1`](.claude/scripts/auditoria.ps1)). Codex solo los carga si confías en el proyecto y te pide aprobar cada hook.
+
+El único script que modifica algo es [`entorno.sh`](.claude/scripts/entorno.sh) (en Windows, [`entorno.ps1`](.claude/scripts/entorno.ps1)), y solo cuando tú lo llamas desde `/instalar`: crea carpetas que falten, registra la bóveda en Obsidian (con respaldo de tu configuración previa) o instala Obsidian — esto último siempre pidiéndote permiso antes. `entorno.sh verificar` solo diagnostica.
 
 ## 📤 Reutilizar / compartir
 Copia la carpeta `Copitori/` y entrégala a otra persona. Al abrirla y saludar, el asistente la configurará desde cero para su realidad. Para empezar limpio, basta con que `00_perfil/identidad.md` tenga `estado_configuracion: SIN_CONFIGURAR`.
