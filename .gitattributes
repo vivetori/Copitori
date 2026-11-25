@@ -1,0 +1,25 @@
+# Finales de línea: LF en todo lo de texto, para que los scripts bash y el contenido generado
+# para Codex (AGENTS.md, .agents/, .codex/) sean idénticos en Windows, macOS y Linux.
+* text=auto eol=lf
+
+*.md    text eol=lf
+*.toml  text eol=lf
+*.json  text eol=lf
+*.sh    text eol=lf
+*.mjs   text eol=lf
+*.js    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+# PowerShell: CRLF (lo que espera Windows PowerShell 5.1). Los .ps1 llevan BOM UTF-8 para que lea bien los acentos.
+*.ps1   text eol=crlf
+
+# Binarios
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.pdf   binary
+*.docx  binary
+*.xlsx  binary
+*.pptx  binary
